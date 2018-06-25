@@ -63,3 +63,5 @@ If the LTPA token is present then it is validated based on the expiration time a
 The `trackLoggedOutSSOCookies` setting in the `server.xml` turns on tracking of the tokens that were logged out, meaning that if they are used again to log in then the user is made to authenticate.
 
 Note that this tracking only works on one server - this may cause problems when turning multi-server.
+
+### Liberty
