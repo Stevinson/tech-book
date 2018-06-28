@@ -26,7 +26,8 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     git clean -fx node_modules
     git clean -fx _book
     git add .
-    git commit -m "Travis build pushed to gh-pages" # add $TRAVIS_BUILD_NUMBER
+    git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" # add $TRAVIS_BUILD_NUMBER
+    echo -e "Pushing to $GH_PAGES_BRANCH"
     git push -fq origin $GH_PAGES_BRANCH 
     echo -e "Deploy completed\n"
 fi
