@@ -13,6 +13,7 @@ TARGET_REPO="stevinson/tech-book"
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo -e "Starting to deploy to Github Pages\n"
     if [ "$TRAVIS" == "true" ]; then
+        echo -e "This is a Travis build"
         git config --global user.email "edward.stevinson@hotmail.com"
         git config --global user.name "Stevinson"
     fi
