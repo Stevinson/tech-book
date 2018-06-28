@@ -17,7 +17,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         git config --global user.name "Stevinson"
     fi
     # clone gh-pages branch
-    git clone --quiet --branch=$MASTER_BRANCH https://${GH_TOKEN}@github.com/$TARGET_REPO built_gitbook
+    git clone --quiet --branch=${MASTER_BRANCH} https://${GH_TOKEN}@github.com/$TARGET_REPO built_gitbook
     # copy data we are interested in
     cd built_gitbook
     echo -e "2"
