@@ -129,6 +129,8 @@ This uses tar to archive the directory and then gzip to compress it. The argumen
 * unzip <zip_file> -d <relative_path>
     The directory in which to extract the files.
 
+    `zip -r squash.zip dir1`: zips a directory
+
 ##### GNU tar
 
 ```terminal
@@ -246,6 +248,10 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 - rm -Rf <directory>
   This deletes all the contents of a directory without having to type yes to each sub-directory.
 
+  `find . \! -name 'file' -delete`
+
+  This deletes all files apart from the one specified.
+  
   - tr [-Ccsu] string1 string2
 
   This utility copies the standard input to the standartd output, substituting or deleting selected characters.

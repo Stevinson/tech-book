@@ -94,6 +94,9 @@ Multiple servlet-mapping elements can be used to associate any number of url pat
 A single manifest file deploys all the microservices. It controls the deployment of the microservices and allows us to pass additional environment variable as needed.
 
 
+---
+
+
 ## Implementation
 
 ### Liberty microservices
@@ -223,3 +226,11 @@ The java steps are as follows:
 1. Iterate over the ResultSet, getting the database fields (columns) from each row of data that is returned
 1. Close the Java database connection
 1. Catch any SQL exceptions that may come up during the process
+
+### Server.xml
+
+For a list of all the possible specifications in the server.xml file, see [this](http://www.setgetweb.com/p/Liberty/server_xml.html) page.
+
+`postParamSaveMethod` :
+
+POST parameters are stored upon redirect. Valid values are `cookie`, `session` and `none`

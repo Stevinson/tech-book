@@ -4,11 +4,15 @@
 
 (Here)[https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html] is some documentation for HTTP status codes.
 
-`import javax.ws.rs.core.Response.Status;`
+```Java
+import javax.ws.rs.core.Response.Status;
+```
 
 Commonly used status codes defined by HTTP, see documentation for the complete list. Additional status codes can be added by applications by creating an implementation of Response.StatusType.
 
-`java.util.function.Function`
+```Java
+java.util.function.Function
+```
 
 Functional interfaces provide target types for lambda expressions and method references.
 
@@ -68,6 +72,10 @@ Suggests that:
 ### 404 - Not Found
 
 The server has not found anything matching the request url.
+
+### 405 - Method not allowed
+
+The method specified in the Request-Line is not allowed for the resource identified by the Request-URI. The response MUST include an Allow header containing a list of valid methods for the requested resource.
 
 ### 409 - Conflict
 

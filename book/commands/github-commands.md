@@ -13,31 +13,28 @@
 
 ## Commands
 
-* `hub create`
-  Creates a remote so git can push to github
+* `hub create` : Creates a remote so git can push to github
 
-* `hub browse`
-  Open browser at the directory.
+* `hub browse` : Open browser at the directory.
 
-* `git remote -v`
-  Sets the origin remote.
+* `git remote -v` : Sets the origin remote.
 
-* Add
+* `git add .` : Add the path.
+  * `-A` : all
 
-```Git
-git add
-  -A # (all)
-```
-
-* Pull
+* `git pull`
   * `-r` or `--rebase`: When true, rebase the current branch on top of the upstream branch after fetching. This means that instead of merging, git finds the base of your branch, finds all of the commits between  that base and HEAD, and re-plays those commits on the HEAD branch you're rebasing onto. Git creates new commits that represent what your changes look like on top of the rebased branch. See [this](https://stackoverflow.com/questions/2715085/rebasing-and-what-does-one-mean-by-rebasing-pushed-commits#28257263) for a good explanation.
 
-* Clone
+* `git clone`
   * `-q`: Operate quietly. Progress is not reported to the standard error stream.
+
+* `git remote`
+  * `set-url <origin> <git@github.com:User/UserRepo.git>` : To change the upstream remote of the directory:
+  * `add <origin> <https://github.com/Stevinson/tech-book.git>` : To add a remote upon creation of the repo.
 
 * `git branch -u origin edward-stevinson`
   Set the upstream branch tying your local branch to the GHE branch
-  * `-u <upstream>`, `--set-upstream-to=<upstream>``
+  * `-u <upstream>`, `--set-upstream-to=<upstream>`
 
            Set up <branchname>'s tracking information so <upstream> is
 
@@ -69,11 +66,7 @@ git commit -
 rm -rf .git
 ```
 
-* To change the upstream remote of the directory:
 
-```Git
-git remote set-url origin git@github.com:User/UserRepo.git
-```
 
 * An ancilliary plumbing command primarily used for manipulation. One common usage is to print the SHA1 hashses given a revision specifier.
 
@@ -96,6 +89,12 @@ cat .git/HEAD # look at what HEAD is pointing to
 
 ```
 git mergetool
+```
+
+* To delete a repo:
+
+```
+git push origin --delete <branch-name>
 ```
 
 ## Errors

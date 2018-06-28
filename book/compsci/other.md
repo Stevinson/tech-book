@@ -333,3 +333,12 @@ A **DNS cache** is a temporary database maintained by the OS that contains recor
 The contents of the cache can be viewed on Windows with the command `ipconfig /displaydns`.
 
 A DNS cache becomes poisoned or polluted when unauthorised domain names or IP address are inserted into it. To solve this you can flush the cache, which forces your computer to repopulate those address the next time ypou try accessing those websites. In Windows this is achieved with `ipconfig /flushdns`. On Mac you should use `dscacheutil -flushcache`.
+
+
+---
+
+
+
+## Contant-addressable Memory (CAM)
+
+CAM is used in very-high-speed searching applications. It is also known as associative memory. Unlike **RAM** in which a user supplies a memory address and the RAM returns the data word at that address, CAM is designed such that the iser supplies a data word and the CAM searches its entire memory to see if that data word is stored anywhere in it. If it is found then a list of the storage address where it was found. It is the hardware embodiment of an associative array.

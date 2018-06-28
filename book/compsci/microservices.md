@@ -25,7 +25,7 @@ Steps:
 
 Whilst there are some simple examples of how to build your own discovery server in the book, this is never recommended in practice. A real-world discovery service is **Consul**. This supports both client- and server-side discovery. **Apache Zookeeper** is a tool that keeps track of distributed configuration data. By itself it is not a complete service discovery tool, but one can be made when combined with **Apache Curator** (a layer that sits on top of Zookeeper). This later approach provides client-side discovery. **Netflix Eureka** makes use of client-side routing. Requests are routed round-robin style. It mostly caters to organisations hosted on AWS. Services are required to send Eureka periodic heartbeats. **Ectd** is a tool for distributing key/value data and making this data accessible and consistent. Again, it does not provide service discovery out the box but does have client libraries in many languages, and as such is used as a component of much larger systems.
 
-**Load balancers** are the original tool for providing service discovery. They are essentially a proxy that are aware of multiple service providers.
+**Load balancers** are the original tool for providing service discovery. They are essentially a proxy that are aware of multiple service providers. Load balancers tend to have **session affinity**, meaning that they balance by session rather than by user. This is because if there are insecure resources then a user cannot be tracked when logged out.
 
 ## Chapter 5: Service State
 
@@ -180,7 +180,7 @@ The easiest means of doing this is to add a URL segment between the root locatio
 
 Microservices revolve around scaling out instead of scaling up - i.e. instead of adding more RAM to a microservice runtime, we simply get another microservice runtime of the same kind. This leads to the need to manage a multitude of services.
 
-Another underlying concept is that when a service has been deployed, they cannot be changed.
+Another underlying concept is that when a service has been deployed, they cannot be changed. When an update is required, a new cluster of containers should be spun up and the old ones torn down.
 
 
 ---

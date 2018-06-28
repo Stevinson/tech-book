@@ -2,6 +2,8 @@
 
 ## Notes
 
+**Docker** is a shipping container system for code. It acts as an engine that enables any payload to be encapsulated as a lightweight, portable self-sufficient container. 
+
 When docker builds images it does so in its own daemon. However, when we want to run things locally inside our VM (Minikube) we need to specify the daemon to use.
 
 ### Dockerfile
