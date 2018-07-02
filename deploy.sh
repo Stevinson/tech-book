@@ -29,7 +29,8 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     git add .
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" # add $TRAVIS_BUILD_NUMBER
     echo -e "Pushing to $GH_PAGES_BRANCH"
-    git config user.name
+    git config --list
+    git remote -v
     git push -fq origin $GH_PAGES_BRANCH 
     echo -e "Deploy completed\n"
 fi

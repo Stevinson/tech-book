@@ -39,6 +39,7 @@ from scipy import misc
 import matplotlib.pyplot as plt
 from PIL import Image
 import tensorflow as tf
+import matplotlib.patches as mpatches
 ```
 
 ### Setup
@@ -58,7 +59,7 @@ with tf.Session() as session:
   result = session.run(computationVariable)
 ```
 
-### Variables and placeholdesr
+### Variables and placeholders
 
 ```python
 state = tf.variable()
@@ -66,4 +67,19 @@ init_op = tf.global_variables_initializer()
 
 a = tf.placeholder(datatype)  # Create a placeholder than data will be placed in when run
 session.run(computationVariable, feed_dict={a:1})
+```
+
+### Adding noise
+
+```python
+y_data = x_data * 3 + 2
+y_data = np.vectorize(lambda y: y + np.random.normal(loc=0.0, scale=0.1))(y_data)
+```
+
+## Equations
+
+```python
+tf.reduce_mean 
+tf.train.GradientDescentOptimiser(learning_rate)
+optimizer.minimize(loss)
 ```
