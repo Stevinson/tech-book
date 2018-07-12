@@ -18,7 +18,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         git config --global user.name "Stevinson"
     fi
     # clone gh-pages branch
-    git clone --quiet --branch=${MASTER_BRANCH} https://${GH_TOKEN}@github.com/$TARGET_REPO built_gitbook
+    git clone --quiet --branch=${MASTER_BRANCH} https://${GH_TOKEN}@github.com/$TARGET_REPO built_gitbook > /dev/null
     # copy data we are interested in
     cd built_gitbook
     git checkout gh-pages
@@ -31,7 +31,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo -e "Pushing to $GH_PAGES_BRANCH"
     git config --list
     git remote -v
-    git push -fq origin $GH_PAGES_BRANCH 
+    git push -fq origin $GH_PAGES_BRANCH > /dev/null
     echo -e "Deploy completed\n"
 fi
 
