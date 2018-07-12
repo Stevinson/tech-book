@@ -33,7 +33,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo '-----------------------------------'
     git config credential.helper "store --file=.git/credentials" # Look for the credentials
     echo "https://${GH_TOKEN}:@github.com" > .git/credentials # Add the token to the credentials file
-    # node ./node_modules/grunt-cli/bin/grunt release # ?
+    node ./node_modules/grunt-cli/bin/grunt release # ?
     echo '-----------------------------------'
     git remote -v
     git push -fq origin $GH_PAGES_BRANCH > /dev/null
