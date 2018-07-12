@@ -30,11 +30,6 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" # add $TRAVIS_BUILD_NUMBER
     echo -e "Pushing to $GH_PAGES_BRANCH"
     git config --list
-    echo '-----------------------------------'
-    git config credential.helper "store --file=.git/credentials" # Look for the credentials
-    echo "https://${GH_TOKEN}:@github.com" > .git/credentials # Add the token to the credentials file
-    node ./node_modules/grunt-cli/bin/grunt release # ?
-    echo '-----------------------------------'
     git remote -v
     git push -fq origin $GH_PAGES_BRANCH > /dev/null
     echo -e "Deploy completed\n"
