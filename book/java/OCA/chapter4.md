@@ -70,5 +70,11 @@ Encapsulation means something specific in Java. Encapsulation means we set up th
 
 You cannot access a non-static variable in a static way. But you can access a static variable with a instance method.
 
+#### Static Initialisation Blocks
+
+A final variable that has not been initialised yet can be initialised in a static block.
+
+Static initialisers make your code hard to read, but there is one case in which they are common - when you need to initalise a static field with multiple lines.
+
 
 ### Autoboxing

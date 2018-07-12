@@ -40,5 +40,3 @@ plt.show()
 * `zip() [0:N]`
 
 Creates a tuple out of lists.
-
-

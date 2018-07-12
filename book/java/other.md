@@ -1,5 +1,13 @@
 # Other
 
+## JDK
+
+To find out where the jdk is saved on a mac, enter the following command:
+
+```
+/usr/libexec/java_home
+```
+
 ## `final` keyword
 
 ### Effectively final variables
@@ -377,3 +385,8 @@ TODO: Anonymous inner classes
 TOREAD:
 
 *
+
+---
+
+
+In a distributed computing environment, distributed object communication realizes communication between distributed objects. The main role is to allow objects to access data and invoke methods on remote objects (objects residing in non-local memory space). Invoking a method on a remote object is known as remote method invocation (RMI) or remote invocation, and is the object-oriented programming analog of a remote procedure call (RPC).

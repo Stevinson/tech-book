@@ -69,6 +69,13 @@ a = tf.placeholder(datatype)  # Create a placeholder than data will be placed in
 session.run(computationVariable, feed_dict={a:1})
 ```
 
+### Function
+
+```python
+def methodName(x): return x
+methodName.eval(session=sess)
+```
+
 ### Adding noise
 
 ```python
@@ -79,7 +86,16 @@ y_data = np.vectorize(lambda y: y + np.random.normal(loc=0.0, scale=0.1))(y_data
 ## Equations
 
 ```python
-tf.reduce_mean 
+tf.reduce_mean
 tf.train.GradientDescentOptimiser(learning_rate)
 optimizer.minimize(loss)
+
+tf.random_normal(
+    shape,
+    mean=0.0,
+    stddev=1.0,
+    dtype=tf.float32,
+    seed=None,
+    name=None
+)
 ```

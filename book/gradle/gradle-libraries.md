@@ -3,7 +3,13 @@
 
 ## Gradle API
 
-`getProperties()` gets all the attributes associated with a project.
+* `getProperties()` gets all the attributes associated with a project.
+
+* The `<<` left shift operator is shorthand for `doLast`. This makes the whole of the task is executable code.
+
+* **ext** is shorthand for project.ext, which is used to define the extra properties associated with the project object. e.g. `ext.person = 'Dolly'`
+
+* `dependsOn` after the task name means that the dependent tasks get run before the task that is called.
 
 ```
 project.findProperty(propertyname)

@@ -203,6 +203,8 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 * `<command> $PATH`
   Lists all the places terminal has looked for the command which <command>where is the program installed
 
+* `ls -l | grep <search term>`
+
 #### iTerm
 
 * `cmmd` + `option` + `/`

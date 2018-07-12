@@ -4,18 +4,20 @@
 
 Helm is a command that streamlines installing and managing Kubernetes applications. Think of it as a homebrew for Kubernetes. It has two parts:
 
-1. A client - helm
+1. A client - helm installed on a laptop
 
-2. A server - tiller. This manages releases of your charts.
+2. A server - tiller. This manages releases of your charts. installed on a kubernetes cluster. receives commands from the client and deploys based on Helm charts.
 
 Charts are Helm packages that contain at least two things:
 
 * A description of the package: Chart.yaml
 
-* One or more templates, which contain Kubernetes manifest files
+* One or more templates, which contain Kubernetes manifest files. Deployments and services inside this folder. `values.yml` define values you can configure at deploy time.
 
 
 Helm charts have values file with the tags of the version numbers which have to be changed if you want to build a different version number.
+
+Helm allows you to package up your kubernetes app.
 
 ## Commands
 

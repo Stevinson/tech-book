@@ -234,3 +234,44 @@ For a list of all the possible specifications in the server.xml file, see [this]
 `postParamSaveMethod` :
 
 POST parameters are stored upon redirect. Valid values are `cookie`, `session` and `none`
+
+### To create a cluster from the command line:
+
+1. Login and go to the target organisation and space
+2. `bx cs init`
+3. `bx cs cluster-create —name <cluster-name>`
+4. To save the IP address and port of something launched on the cluster:
+    `nodeip=$(bx cs workers cloudnativedev | grep -v '^*' | egrep -v "(ID|OK)" | awk '{print $2;}' | head -n1)`
+    And then to get it:
+    echo "http://${nodeip}:${port}"
+5. To access a cluster:
+  - `bx cs cluster-config <cluster-name>``
+  - Copy and paste the returned env variable into the command line.
+  - `kubectl get nodes` : to ensure pointing at the right thing
+  - `kubectl proxy`
+    Launches the Kubernetes dashboard in your browser.
+- To find the IP address/ cluster/ troubleshoot:
+  - kubectl get nodes -o yaml if not using Minikube
+  - minikube ip if using Minikube
+  - kubectl cluster-info
+  - kubectl describe pods
+  - kubectl logs <pod_name>
+  - Commands can be executed directly on the container when the pods are up and running:
+    kubectl exec <pod_name> <command>
+    And a bash session can be started for a pod:
+    kubectl exec -ti <pod_name> bash
+    This gives an open console on the container where we run our application. The cource code for the application is at
+
+- To view the cluster locally via Minikube:
+  1. kubectl proxy must be run to estblish a proxy so that communications can reach the private Kunbernets network. http://localhost:8001 now displays all the APIs hosted through the proxy endpoint.
+  2. http://localhost:8001/api/v1/proxy/namespaces/default/pods/<pod_name>
+     This is used to access the webpage.
+- To use a new docker image when code has changed:
+  1. Check that the kubernetes is configured to the correct cluster:
+     kubectl config current-context
+     This should return cloudnativedev. If not set it with: bx cs cluster-config <clustername> and paste the returned export command in the command line.
+  2. Set the Docker image:
+     kubectl set image deployment/bluecompute-web-deployment web-ce=ibmcase/bluecompute-web:tutorial-task8
+  3. Ensure that deployment was successful, manually validate the image name and running status:
+     kubectl describe rs bluecompute-web-deployment
+  4.

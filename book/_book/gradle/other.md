@@ -11,16 +11,3 @@ ensuresecurecookiesinliberty
 
 
 deploybasicuserregistry
-
-
-## Groovy
-
-To debug a groovy file create a new groovy file and use println with a main.
-
-```
-static void main(String[] args)
-{
-    Bob bob = new Bob()
-    println bob.discoTopologyWithValidSecureSolrKeyStoreConfig
-}
-```
