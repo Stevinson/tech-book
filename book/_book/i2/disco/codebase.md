@@ -16,7 +16,7 @@ This sets up Guice bindings.
 
 `ChartResourceDelegateWrapper`
 
-This is for Jackson.
+This is for JAX-RS.
 
 `ChartResourceDelegate`
 
@@ -51,7 +51,7 @@ This gives the original JSON
 
 * `TestServiceCallHelper`
 
-* 
+*
 
 ---
 

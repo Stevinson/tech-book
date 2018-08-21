@@ -32,6 +32,8 @@
   * `set-url <origin> <git@github.com:User/UserRepo.git>` : To change the upstream remote of the directory:
   * `add <origin> <https://github.com/Stevinson/tech-book.git>` : To add a remote upon creation of the repo.
 
+### Branching
+
 * `git branch -u origin edward-stevinson`
   Set the upstream branch tying your local branch to the GHE branch
   * `-u <upstream>`, `--set-upstream-to=<upstream>`
@@ -42,11 +44,9 @@
 
            specified, then it defaults to the current branch.
 
-* Show which upstream branch all the branches of that repo are tracking
+* `git branch -vv` - Show which upstream branch all the branches of that repo are tracking
 
-```Git
-- git branch -vv
-```
+* `git branch -f <branchName> <hash + relative move>` - reassign a branch to a specific commit
 
 * This removes untracked files from the working tree. The -f is short for —force and overrides the default functionality that git refuses to delete files or directories. The -x means that the standard ignore rules set by the .gitignore file.
 
@@ -66,38 +66,38 @@ git commit -
 rm -rf .git
 ```
 
-
-
 * An ancilliary plumbing command primarily used for manipulation. One common usage is to print the SHA1 hashses given a revision specifier.
 
 ```Git
 git rev-parse
 ```
 
-* Reset current HEAD to the specified state. You can think of HEAD as the current branch (when you switch branches, the HEAD revision changes to point to the tip of the new branch).
+* To delete a repo:
 
 ```Git
-git reset upstream/gh-pages
-
-cat .git/HEAD # look at what HEAD is pointing to
+git push origin --delete <branch-name>
 ```
 
 * To remove untracked files from the working tree use the `clean` command. It does this by recursively removing files that are not under version.
   * `-x` This also removes ignored files.
 
-* To deal with merges:
+## Merging and rebasing
 
-```
-git mergetool
-```
+* `git mergetool` - To deal with merges
 
-* To delete a repo:
+* `git rebase -i HEAD~4` - interactive rebasing. This opens up a UI. Select the number of commits you want the option of refactoring. It creates a new series of commits to represent the changes, starting from where you selected to go up to in the original command.
 
-```
-git push origin --delete <branch-name>
-```
 
-## Errors
+## Resetting changes
+
+* Reset current HEAD to the specified state. You can think of HEAD as the current branch (when you switch branches, the HEAD revision changes to point to the tip of the new branch).
+
+* `git reset <commit>` - reset reverts changes by moving a branch reference back to an older commit but this only works for local changes
+
+* `git revert <branch>` - creates a new commit that contains changes to revert the previous commit
+
+
+### Errors
 
 * When unable to connect when attempting to clone a repo, then run the following commands and restart the terminal.
 
@@ -105,3 +105,24 @@ git push origin --delete <branch-name>
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
+
+### HEAD
+
+* `git checkout <commit hash>` - this will detach the head and attach it to a commit instead.
+
+* `cat .git/HEAD` - look at what HEAD is pointing to
+
+* `git log --graph --decorate --pretty=format:‘%C(auto,yellow)%h%Cred%>(13,trunc) %ad  %C(auto,green)%<(10,trunc)%aN%C(auto,reset)  %s%C(auto,red)% gD% D’ --abbrev-commit --all --date=relative` - display a coloured graph of git commits
+
+
+### Other
+
+Relative commits:
+
+* `^` - move up one commit at a time
+
+* `~<number>` - moves upwards a number of times
+
+* e.g. `git checkout branchName~5` - note that this does not effect the branch you are currently pointing at
+
+* `git cherry-pick <commit1> <commit2> <...>` - facilitates moving commits to other branches

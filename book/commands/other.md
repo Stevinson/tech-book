@@ -30,6 +30,13 @@ Technologies that only have a few commands notes have been bunched together here
 
 ---
 
+## IntelliJ
+
+* `cmmd` + `backspace` : deletes the line the cursor is on.
+
+
+---
+
 ## DB2
 
 ### Error Messages

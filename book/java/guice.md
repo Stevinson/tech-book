@@ -46,7 +46,7 @@ There are three types of scope in Guice, and these should be chosen based on how
 
 1. `@RequestScope` remembers stuff across classes.
 
-1. Container scope are life long bindings, and are used for things like servers which will want the same properties associated for their life.
+1. `@ContainerScope` are life long bindings, and are used for things like servers which will want the same properties associated for their life.
 
 Scope is defaulted to instance, so this is what everything that is not explicitely labelled otherwise is.
 

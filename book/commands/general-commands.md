@@ -126,7 +126,9 @@ This uses tar to archive the directory and then gzip to compress it. The argumen
 
   * `-t` : List archive contents to stdout. Prints the absolute path of all the files in the archive.
 
-* unzip <zip_file> -d <relative_path>
+* `tar -xvzf /path/to/yourfile.tgz` - Extract tgz
+
+* `unzip <zip_file> -d <relative_path>`
     The directory in which to extract the files.
 
     `zip -r squash.zip dir1`: zips a directory
@@ -253,7 +255,7 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
   `find . \! -name 'file' -delete`
 
   This deletes all files apart from the one specified.
-  
+
   - tr [-Ccsu] string1 string2
 
   This utility copies the standard input to the standartd output, substituting or deleting selected characters.

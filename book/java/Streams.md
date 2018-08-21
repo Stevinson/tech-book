@@ -54,6 +54,14 @@ Returns a stream consisting of the elements of this stream, additionally perform
 
 Peek is mainly for debugging purposes and as such the method used on the elements of the stream should not modify them. It is mainly for observing the elements, e.g. checking the size of each element or logging each element.
 
+### `skip(long n)`
+
+Returns a stream consisting of the remaining elements of this stream after discarding the first n elements of the stream.
+
+### `limit(long maxSize)`
+`
+Returns a stream consisting of the elements of this stream, truncated to be no longer than maxSize in length.
+
 # Generator Functions
 
 

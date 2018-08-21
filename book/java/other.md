@@ -357,7 +357,7 @@ Generally, a virtual method is one that is inheritable and overridable. It is an
 
 Virtual functions are resolved 'late'. If the function in question is 'virtual' in the base class, the most-derived class's implementation of the function is called according to the actual type of the object referred to, regardless of the declared type of the pointer or reference. If it is not 'virtual', the method is resolved 'early' and the function called is selected according to the declared type of the pointer or reference.
 
-A **pure virtual function** is one that is required to be implemented by a derived class. Classes containg pure virtual functions are termed **abstract** and cannot be instantiated directly.
+A **pure virtual function** is one that is required to be implemented by a derived class. Classes containing pure virtual functions are termed **abstract** and cannot be instantiated directly.
 
 
 ---
@@ -390,3 +390,48 @@ TOREAD:
 
 
 In a distributed computing environment, distributed object communication realizes communication between distributed objects. The main role is to allow objects to access data and invoke methods on remote objects (objects residing in non-local memory space). Invoking a method on a remote object is known as remote method invocation (RMI) or remote invocation, and is the object-oriented programming analog of a remote procedure call (RPC).
+
+
+---
+
+## Environment Variables
+
+In Java `System.getEnv()` is used to retrieve environment variables.
+
+
+---
+
+
+## Anonymous subclass instantiation
+
+You can instantiate an anonymous abstract sublass with the following code:
+
+```Java
+abstract class My {
+    public void myMethod() {
+        System.out.print("Abstract");
+    }
+}
+
+class Poly extends My {
+    public static void main(String a[]) {
+        My m = new My() {};
+        m.myMethod();
+    }
+}
+```
+
+
+---
+
+
+## DAO Design Pattern
+
+The **data access object (DAO)** allows the isolation of the application layer from the persistence layer. This hides all the complexities of performing CRUD operations from the application layer.
+
+An example is having an application that works with users, with name and email properties.
+
+
+## Volatile
+
+The **volatile** keyword is used to indicate that a variable's value will be modified by different threads. as a result the value of the variable will never be cached thread-locally, but rather go straight to main memory. Also, access to the variable acts as though it is enclosed in a **synchronised block**.

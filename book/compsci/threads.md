@@ -51,3 +51,8 @@ Wakes up all the threads that called wait() on the same object.
 ### ReentrantLock
 
 A **reentrantlock** is owned by the thread last successfully locking, but not yet unlocking it yet.
+
+
+## Java Threads
+
+To solve the thread problem with lazy initialisation and singletons in a multi-threaded program one could declare the `getInstance()` method as `synchronized`. However, this comes with a large overhead as every time the method is invoked it has to go through the process of waiting for the lock and then obtaining the lock. A solution is to use the **double checked locking**.

@@ -11,6 +11,8 @@
 
 * `dependsOn` after the task name means that the dependent tasks get run before the task that is called.
 
+* `finalizedBy` is the opposite of `dependsOn` in that
+
 ```
 project.findProperty(propertyname)
 
@@ -18,6 +20,8 @@ project.findProperty(propertyname)
 ```
 
 There is a one-to-one relationship between a Project and a build.gradle file. During a build initialisation, Gradle assembles a **project object** for each project which to participate in the build.
+
+* `$buildDir` is an automatically created variable that defaults to the build directory.
 
 
 ## i2 API

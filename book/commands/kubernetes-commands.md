@@ -16,20 +16,22 @@ Pods that are running inside Kubernetes are running on a private, isolated netwo
 
 ## Commands
 
+### Minikube
+
+* `minikube delete`
+
 * `minikube start`
   * `—memory 8192` : Increase the memory allocated.
   * `eval $(minikube docker-env)``
   Tell docker to use the reference to the docker daemon running in minikube, rather than your local docker runtime.
 
+* `minikube status`
+
 * `minikube dashboard`
 
-* `docker build -t <proposed_name> <path_to_image>`
-  Build the docker image with Kubernetes.
-
-* `kubectl create -f service.yaml`
-  Create a Kubernetes service.
-
 * `minikube ip`
+
+* `minikube run <>`
 
 ```terminal
 minikube addons enable ingress
@@ -37,6 +39,14 @@ minikube addons enable ingress
 minikube addons enable kube-dns
 ```
 This enables the ingress and kube-dns minikube addons so that we can access our microservices from our web browser.
+
+### Kubernetes
+
+* `docker build -t <proposed_name> <path_to_image>`
+  Build the docker image with Kubernetes.
+
+* `kubectl create -f service.yaml`
+  Create a Kubernetes service.
 
 * To list all the services running on kubernetes:
 
@@ -58,10 +68,11 @@ kubectl get services
   - kubectl get nodes
   - kubectl proxy
     Launches the Kubernetes dashboard in your browser.
-- To find the IP address/ cluster/ troubleshoot:
-  - kubectl get nodes -o yaml if not using Minikube
+
+* To find the IP address/ cluster/ troubleshoot:
+  * `kubectl get nodes -o yaml` if not using Minikube
   - minikube ip if using Minikube
-  - kubectl cluster-info
+  * `kubectl cluster-info`
   - kubectl describe pods
   - kubectl logs <pod_name>
   - Commands can be executed directly on the container when the pods are up and running:

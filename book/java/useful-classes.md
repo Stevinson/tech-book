@@ -10,7 +10,7 @@ All byte stream classes are descended from **InputStream** and **OutputStream**.
 
 Similar to the above but work on characters and not bytes.
 
-1. Buffered Strams:
+1. Buffered Streams:
 
 The above two streams are examples of unbuffered I/O. This means that each read or write is handled directly by the underlying OS. To reduce the overhead caused by this inefficient process the Java platform implemets buffered I/O streams. These read data depm a memory area known as the buffer and the native input API is called only when the buffer is empty
 
@@ -31,3 +31,8 @@ Writes test to a character-output stream, buffering so as to provide for the eff
 `UUID.randomUUID().toString()`
 
 This gives a random UUID.
+
+
+### Matcher
+
+An engine that performs match operations on a character sequence by interpreting a Pattern.

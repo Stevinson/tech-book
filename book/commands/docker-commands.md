@@ -2,7 +2,7 @@
 
 ## Notes
 
-**Docker** is a shipping container system for code. It acts as an engine that enables any payload to be encapsulated as a lightweight, portable self-sufficient container. 
+**Docker** is a shipping container system for code. It acts as an engine that enables any payload to be encapsulated as a lightweight, portable self-sufficient container.
 
 When docker builds images it does so in its own daemon. However, when we want to run things locally inside our VM (Minikube) we need to specify the daemon to use.
 
@@ -67,6 +67,10 @@ EXPOSE <port_number>
 ENTRYPOINT
 ```
 
+### Docker Compose
+
+**Docker Compose** is a tool for defining and running multi-container Docker applications. 
+
 ## Commands
 
 ### Fundamental Commands
@@ -89,14 +93,7 @@ Build the docker image with Kubernetes.
   - docker images
   - make -f <makefile_name>
 
-* Delete docker images/ containers.
-
-```
-docker rmi # delete a docker image
-docker rm $(docker ps -a -q) # delete all the docker containers
-```
-
-### Remove docker container
+### Remove docker container and images
 
 ```
 docker ps                                   // This lists all of the docker containers.
@@ -108,6 +105,13 @@ docker rm $(docker ps -aq)                  // This removes all docker container
 gradle createDocker                         // Can be run from master, and only needed if the image has been deleted
 
 gradle initDocker                           // Again from master. For reference this task is in docker.gradle in the Deployment project
+```
+
+* Delete docker images/ containers.
+
+```
+docker rmi # delete a docker image
+docker rm $(docker ps -a -q) # delete all the docker containers
 ```
 
 ### i2 Docker Commands

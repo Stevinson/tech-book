@@ -22,9 +22,9 @@
 
 ### Integer
 
-* `parseInt()` returns an `Integer`.
+* `parseInt()` returns an `int`.
 
-* `valueOf` return an `int`.
+* `valueOf` return an `Integer`.
 
 ### Long
 
