@@ -29,7 +29,7 @@
   * `-q`: Operate quietly. Progress is not reported to the standard error stream.
 
 * `git remote`
-  * `set-url <origin> <git@github.com:User/UserRepo.git>` : To change the upstream remote of the directory:
+  * `set-url <origin> <https://github.com/Stevinson/events-microservice.git>` : To change the upstream remote of the directory:
   * `add <origin> <https://github.com/Stevinson/tech-book.git>` : To add a remote upon creation of the repo.
 
 ### Branching
@@ -47,6 +47,16 @@
 * `git branch -vv` - Show which upstream branch all the branches of that repo are tracking
 
 * `git branch -f <branchName> <hash + relative move>` - reassign a branch to a specific commit
+
+* The following code brings in changes from master to your branch and then pushes your branch:
+
+```
+git pull --rebase
+git checkout <branch>
+git rebase master
+git checkout master
+git merge <branch>
+```
 
 * This removes untracked files from the working tree. The -f is short for —force and overrides the default functionality that git refuses to delete files or directories. The -x means that the standard ignore rules set by the .gitignore file.
 
@@ -126,3 +136,18 @@ Relative commits:
 * e.g. `git checkout branchName~5` - note that this does not effect the branch you are currently pointing at
 
 * `git cherry-pick <commit1> <commit2> <...>` - facilitates moving commits to other branches
+
+* For a good reference of `.gitignore` patterns, look [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
+
+* To turn off tags if they appear: `git config remote.origin.tagopt --no-tags`
+
+* Delete all local tags you may have: `git tag -l | xargs git tag -d`
+
+* To configure git to use an external compare editor:
+
+```
+$ git config --global diff.tool bc3
+$ git config --global difftool.bc3.trustExitCode true
+$ git config --global merge.tool bc3
+$ git config --global mergetool.bc3.trustExitCode true
+```

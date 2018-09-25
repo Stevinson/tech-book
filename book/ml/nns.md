@@ -8,15 +8,18 @@ CNNs operate differently from traditional NNs in which every neuron in a layer i
 
 Each neuron in a CNN however is only connected to a few nearby local neurons in the previous layer, and the neurons share the same weights and biases. This type of structure only makes sense when the data is spatial, and has local features that can be extracted. So it makes sense to apply a small window around a set of pixels in order to look for images features. By using the same weights, the new assumes that the feature is equally likely to occur at every input position. This means the window can search over the whole image, and can be scaled and rotated.
 
-**Feature engineering** is the process of extracting useful patterns from the input data in order to help the predictive model understand the true nature of the problem. CNNs are extremely good at not only finding features but also combining them together to increase the complexity of the patterns. The final yers use these generated features for the task at hand.
+**Feature engineering** is the process of extracting useful patterns from the input data in order to help the predictive model understand the true nature of the problem. CNNs are extremely good at not only finding features but also combining them together to increase the complexity of the patterns. The final layers use these generated features for the task at hand. Good feature learning significantly increases the accuracy of the applied machine learning algorithms in a way that would be too expensive for the machine learning itself.
 
 A kernel which sums adjacent pixels and averages them results in blurring an image. A kernel which only subtracts two adjacent pixels serves to highlight edges, as pixels of similar intensity will subtract to zero. This is useful for the beginning layers of a CNN.
 
-```python
-np.convolve(A,B)
-```
-
 The numpy library is typically not enough for deep learning.
+
+### Common kernels
+
+#### Edge detection
+
+A kernel of just two values, one negative and one positive, will reveal edges, as edges tend to have dissimilar adjacent pixel values.
+
 
 
 ---
@@ -42,4 +45,4 @@ There are many different types of recurrent neural network:
 
 RNNs are extremely sensitive to changes in their parameters due to **vanishing** or **exploding** gradient, meaning trainign is difficult
 
-**Long-short term memory model (LSTM)** is an abstraction of computer memory. 4 main elements: me,ory cell: holding data 3 logisti gates: right (input) writes data into memory cell, readoutput reads data and sens to recirent net -1 and 1 to determine how much sent, keep  gate delete data from the info cell. can remember what it needs and can forget what it no longer needs.   the gates take a value between 0 and 1. Manipulates data in the information. Use logistic gates as they have nice derivatives. By manipulating values through the gates, we eliminate the vanishing gradient and exploding gradient problems from before. By allowing the network to forget states that are no longer needed, the computational load of the model decreases dramatically. 
+**Long-short term memory model (LSTM)** is an abstraction of computer memory. 4 main elements: me,ory cell: holding data 3 logisti gates: right (input) writes data into memory cell, readoutput reads data and sens to recirent net -1 and 1 to determine how much sent, keep  gate delete data from the info cell. can remember what it needs and can forget what it no longer needs.   the gates take a value between 0 and 1. Manipulates data in the information. Use logistic gates as they have nice derivatives. By manipulating values through the gates, we eliminate the vanishing gradient and exploding gradient problems from before. By allowing the network to forget states that are no longer needed, the computational load of the model decreases dramatically.

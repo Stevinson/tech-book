@@ -24,6 +24,8 @@ An object will remain on the heap until it is no longer reachable, which occurs 
 
 2. All references have gone out of scope.
 
+It is objects (on the heap) and not their references that get garbage collected.
+
 ## finalize()
 
-The `finalize()` method gets called if the garbage collector tries to collect the object. If the garbage collector does not get run then method does get run. If the garbage collector fails to collect the object and trues to run it again later, the method does get called a second time.
+The `finalize()` method gets called if the garbage collector tries to collect the object. If the garbage collector does not get run then method does get run. If the garbage collector fails to collect the object and tries to run it again later, the method does get called a second time.

@@ -91,6 +91,8 @@ The requested resource is no longer available at the server and no forwarding ad
 
 The server encountered an unexpected condition which prevented it from fulfilling its request.
 
+### 502 - Invalid Response
+
 ### 503 - Service Unavailable
 
 The server is currently unable to handle the request due to temporary overloading or maintenance of the server. Tge implication is that this is a temporary condition that will be alleviated after some delay.

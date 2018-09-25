@@ -20,7 +20,22 @@
 
 
 
+4. Connect to IBM Cloud
 
+  * Create a `manifest.yml` file in the project's root directory. A basic example is as follows:
+
+  ```
+  applications:
+  3  - name: GetStartedJava
+  4    random-route: true
+  5    path: target/GetStartedJava.war
+  6    memory: 256M
+  7    instances: 1
+  ```
+
+  * log in
+  * `bx target --cf`
+  * `bx cf push` from within the root directory
 
 
 TODO:
@@ -30,6 +45,8 @@ TODO:
 * Set up local minikube
 
 * Set up IBM cloud so online
+
+* Add redis to cache db stuff
 
 * Docker images
 

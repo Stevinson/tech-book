@@ -5,3 +5,8 @@ A WebSocket is a communications protocol, providing full-duplex communication ov
 ## Full Duplex
 
 A **full-duplex (FDX)** system (or double duplex) allows communication in both directions and, unlike half-duplex, allows this to happen simultaneously. An example of a full-duplex system would be a landline telephone.
+
+
+## Other
+
+**Half-open socket** is caused when one side of the HTTP proxy is open and the other is closed, leading to a situation where the server thinks that everything is OK.

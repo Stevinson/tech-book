@@ -18,6 +18,8 @@ TensorFlow defines computations as graphs and these are made with operations, fo
 
 To execute these operations we must launch the graph into a session.
 
+This is so efficient because instead of returning to Python all the time, it creates all the operations in the form of graphs and executes them once with the highly optimised backend.
+
 
 ---
 
@@ -98,4 +100,23 @@ tf.random_normal(
     seed=None,
     name=None
 )
+```
+
+### ML
+
+```python
+np.convolve(A,B) # Convolves two arrays
+```
+
+
+### Images
+
+* To convert an image to a matrix of values between 0 and 255: `np.asarray(image)`
+
+* Then to plot the matrix image:
+
+```
+imgplot = plt.imshow(array)
+imgplot.set_cmap('gray')
+plt.show(imgplot)
 ```

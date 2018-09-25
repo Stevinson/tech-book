@@ -53,11 +53,19 @@ Gradle is a plug-in based language. Almost all projects will use at least one pl
 
 A **source set** is a group of source files which are compiled and executed together. Inside the `java` plugin there are a bunch of tasks, some of which are common like `compileJava`.
 
+* A **script plugin** is essentially adding another build file into your own build file (note that they are idempotent).
+
+* **Binary plugins** use the syntax `apply plugin: 'java'` that uses the `buildscript` block to tell gradle where the dependency is.
+
+* `plugins.gradle.org` is a repository of Gradle plugins.
 
 
 ### Tasks
 
-* Tasks have an `onlyIf` property which takes a predicate to decide whether the task gets run.
+* Tasks can be made conditional by two means:
+
+  1. Tasks have an `onlyIf` property which takes a predicate to decide whether the task gets run.
+  2. Tasks with inputs and outputs. A hash gets taken of these when a task is run, meaning that the next time it is called they can be checked and then the task is only run of they are different.
 
 * Tasks can be enabled/ disabled by setting their `.enabled` property to true or false.
 

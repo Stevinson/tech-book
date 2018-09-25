@@ -31,4 +31,8 @@ A **primary key** is a unique constraint based on the key that is of primary imp
 
 #### Foreign Key Constraints
 
-A **foreign key** is a set of columns in a table that which are required to match at least one primary key of a row in another table. 
+A **foreign key** is a set of columns in a table that which are required to match at least one primary key of a row in another table.
+
+##
+
+OLD TABLE, NEW TABLE and FINAL TABLE can be used to see what has changed after an update.

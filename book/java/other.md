@@ -2,11 +2,19 @@
 
 ## JDK
 
+To find out which java you are using:
+
+`which java`
+
 To find out where the jdk is saved on a mac, enter the following command:
 
-```
-/usr/libexec/java_home
-```
+`/usr/libexec/java_home`
+
+To set JAVA_HOME follow the instruction at http://www.sajeconsultants.com/how-to-set-java_home-on-mac-os-x/.
+
+
+
+
 
 ## `final` keyword
 
@@ -435,3 +443,18 @@ An example is having an application that works with users, with name and email p
 ## Volatile
 
 The **volatile** keyword is used to indicate that a variable's value will be modified by different threads. as a result the value of the variable will never be cached thread-locally, but rather go straight to main memory. Also, access to the variable acts as though it is enclosed in a **synchronised block**.
+
+
+---
+
+## Garbage Collections
+
+There are two types of garbage collection:
+
+1. Stop the World
+
+Within stop the world there are two states:
+
+2. Concurrent
+
+This incrementally asks if things are still being used. it takes longer epr event but doesn't stop the world.

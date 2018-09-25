@@ -34,6 +34,10 @@ Technologies that only have a few commands notes have been bunched together here
 
 * `cmmd` + `backspace` : deletes the line the cursor is on.
 
+### To debug a server
+
+1. `wlp/bin ./server debug <server_name>`
+2. Look for 'Attach to process' and select the relevent option
 
 ---
 
@@ -182,4 +186,21 @@ Delete history.
 
 ```bashrc
 server package <server_name> --archive=<package_file_name.zip> --include=all
+```
+
+## Maven
+
+To use maven in a session:
+
+1. Set the JAVA_HOME variable:
+
+```
+which java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+```
+
+2. Add maven to the path
+
+```
+export PATH=/opt/apache-maven-3.5.4/bin:$PATH
 ```

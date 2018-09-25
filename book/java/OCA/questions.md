@@ -26,9 +26,9 @@
 
 * Java automatically widens a type.
 
-* Automatic variable initialisation occurs for instance variables but not method variables.
+* Objects get initialised to null, whilst primitives get initialised to 0 (along with Strings being null i.e. empty string).
 
-* Objects get initialised to null, whilst primitives get initialised to 0 (along with Strings being "" i.e. empty string).
+* *Automatic variable initialisation occurs for instance variables but not method variables.*
 
 * A decimal will automatically be a `double`; to make it a `float` it needs to be cast with an `f`.
 
@@ -110,7 +110,7 @@
 
 * You cannot instantiate an abstract class.
 
-* An abstract method may only be declared in an abstract class, otherwise the code will not compile.
+* *An abstract method may only be declared in an abstract class, otherwise the code will not compile.*
 
 * An abstract method may not be given an implementation.
 
@@ -124,7 +124,7 @@
 
 * A **checked exception** includes Exception and all subclasses that do not extend RuntimeException.
 
-* The order of catches is important. Subclasses must be caught before their supeclasses.
+* The order of catches is important. Subclasses must be caught *before* their superclasses.
 
 * The code in the `finally` block will be called regardless of whether the `catch` statement being called.
 
@@ -156,7 +156,43 @@
 
 * Methods that are on Stringbuilder: append(string), insert(offset, string), delete(int, int), deleteCharAt(int), reverse(), toString()
 
-* The date/time objects added in Java 8, such as LocalDateTime, are also immutable.x
+* The date/time objects added in Java 8, such as LocalDateTime, are also immutable.
+
+* Note that Strings and Arrays are Objects in Java
+
+* When passing an array to a method the reference cannot be modified to impact the reference in the calling method *but the data in the array can be*.
+
+* The following are valid ways of declaring arrays:
+
+```Java
+String[] array = new String[] {"one", "two"};
+```
+
+* An object can be assigned to a superclass reference or interface without an explicit cast, but cannpot be assigned to a subclass reference without an explicit cast.
+
+* Java does BIDMAS
+
+* Regardless of the type of the reference you have for an object in memory, the object itself does not change. The reference is created by the left hand side of the declaration, whilst the object is created by the code following the new (the right hand side). What has changed is our ability to access methods within the object with the different reference. You only have access to the methods of the type that has been cast.
+
+* Technically, polymorphism is the ability of a Java object to be accessed using a reference with the same type as the object, a reference that is a superclass of the object, or a reference that defines an interface that the object implements (either directly or through a superclass).
+
+* A virtual method is a method in which the specific implementation is not determined until runtime (which is all non-final, non-static, non-private methods).
+
+* An overridden method must be at least as accessible as the method it is overriding.
+
+* A try statement can have 0 or more catch's and 0 or more finally's, but must have at least one of them.
+
+* `LocalDate` uses a static method to new it up rather than a constructor.
+
+* Chained period statements do copile (and return the result of the last one) but is incorrect.
+
+* Some classes are `LocalDate`, `Period`, `DateTimeFormatter`.
+
+* `ArithmeticException` and `IllegalArgumentException`
+
+* The value of a `case` statement must either be a literal or a final variable.
+
+* if a = 5 then a++ will return 5 whilst ++a would return 6
 
 ## Repeated
 
@@ -167,3 +203,9 @@
 1. Revise abstract classes
 
 2. Revise StringBuilders
+
+3. Look at the syntax of declaring arrays
+
+4. Go through areas I got wrong in the last exam
+
+5. pre and post increment
