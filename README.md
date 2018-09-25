@@ -1,4 +1,4 @@
-[Build Status](https://travis-ci.com/Stevinson/tech-book.svg?branch=master)
+![Build Status](https://travis-ci.com/Stevinson/tech-book.svg?branch=master)
 
 This repo builds a gitbook of all the notes taken whilst at IBM.
 
