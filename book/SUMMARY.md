@@ -29,7 +29,7 @@
 	* [Web Applications](compsci/webapp.md)
 	* [Websockets](compsci/websockets.md)
 	* [Windows OS](compsci/windows.md)
-* [Java]
+* Java
 	* [Annotations](java/annotations.md)
 	* [Collections](java/collections.md)
 	* [Comparison with other languages](java/compare.md)

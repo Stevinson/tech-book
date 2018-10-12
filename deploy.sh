@@ -18,17 +18,17 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         git config --global user.name "Stevinson"
     fi
     # clone gh-pages branch
-    git clone --quiet --branch=${MASTER_BRANCH} https://${GH_TOKEN}@github.com/$TARGET_REPO built_gitbook > /dev/null
+    git clone --quiet --branch=${GH_PAGES_BRANCH} https://${GH_TOKEN}@github.com/$TARGET_REPO built_gitbook > /dev/null
     # copy data we are interested in
-    cd built_gitbook
-    git checkout gh-pages
-    gitbook build book ./_book
+    # cd built_gitbook
+    # git checkout gh-pages
+    # gitbook build book ./_book
     cp -R _book/* .
     git clean -fx node_modules
     git clean -fx _book
     git add .
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" # add $TRAVIS_BUILD_NUMBER
-    echo -e "Pushing to $GH_PAGES_BRANCH"
+    echo -e "Pushing $GH_PAGES_BRANCH"
     git config --list
     git remote -v
     git push -fq origin $GH_PAGES_BRANCH > /dev/null
