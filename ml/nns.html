@@ -1,0 +1,1319 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Neural Networks · IBM tech notes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="python.html" />
+    
+    
+    <link rel="prev" href="jupyter.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Terminal Commands
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../commands/bluemix-commands.html">
+            
+                <a href="../commands/bluemix-commands.html">
+            
+                    
+                    Bluemix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../commands/docker-commands.html">
+            
+                <a href="../commands/docker-commands.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../commands/eclipse-commands.html">
+            
+                <a href="../commands/eclipse-commands.html">
+            
+                    
+                    Eclipse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../commands/general-commands.html">
+            
+                <a href="../commands/general-commands.html">
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../commands/github-commands.html">
+            
+                <a href="../commands/github-commands.html">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../commands/helm-commands.html">
+            
+                <a href="../commands/helm-commands.html">
+            
+                    
+                    Helm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../commands/istio-commands.html">
+            
+                <a href="../commands/istio-commands.html">
+            
+                    
+                    Istio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../commands/kubernetes-commands.html">
+            
+                <a href="../commands/kubernetes-commands.html">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../commands/other.html">
+            
+                <a href="../commands/other.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../commands/vim-commands.html">
+            
+                <a href="../commands/vim-commands.html">
+            
+                    
+                    Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Computer Science
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../compsci/cookies.html">
+            
+                <a href="../compsci/cookies.html">
+            
+                    
+                    Cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../compsci/cpp.html">
+            
+                <a href="../compsci/cpp.html">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../compsci/databae-tech.md">
+            
+                <span>
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../compsci/http.html">
+            
+                <a href="../compsci/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../compsci/kubernetes.html">
+            
+                <a href="../compsci/kubernetes.html">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../compsci/marshelling.html">
+            
+                <a href="../compsci/marshelling.html">
+            
+                    
+                    Marshelling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../compsci/microservices.html">
+            
+                <a href="../compsci/microservices.html">
+            
+                    
+                    Microservices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../compsci/other.html">
+            
+                <a href="../compsci/other.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../compsci/ports.html">
+            
+                <a href="../compsci/ports.html">
+            
+                    
+                    Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../principles.md">
+            
+                <span>
+            
+                    
+                    Programming Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../compsci/security.html">
+            
+                <a href="../compsci/security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../compsci/solr.html">
+            
+                <a href="../compsci/solr.html">
+            
+                    
+                    Solr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../compsci/threads.html">
+            
+                <a href="../compsci/threads.html">
+            
+                    
+                    Threads
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../compsci/webapp.html">
+            
+                <a href="../compsci/webapp.html">
+            
+                    
+                    Web Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../compsci/websockets.html">
+            
+                <a href="../compsci/websockets.html">
+            
+                    
+                    Websockets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../compsci/windows.html">
+            
+                <a href="../compsci/windows.html">
+            
+                    
+                    Windows OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    [Java]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../java/annotations.html">
+            
+                <a href="../java/annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../java/collections.html">
+            
+                <a href="../java/collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../java/compare.html">
+            
+                <a href="../java/compare.html">
+            
+                    
+                    Comparison with other languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../java/enum.html">
+            
+                <a href="../java/enum.html">
+            
+                    
+                    Enum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../java/Exceptions-and-errors.html">
+            
+                <a href="../java/Exceptions-and-errors.html">
+            
+                    
+                    Exceptions and Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../java/facade.html">
+            
+                <a href="../java/facade.html">
+            
+                    
+                    Facade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../java/factories.html">
+            
+                <a href="../java/factories.html">
+            
+                    
+                    Factories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../java/guice.html">
+            
+                <a href="../java/guice.html">
+            
+                    
+                    Guice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../java/junit.html">
+            
+                <a href="../java/junit.html">
+            
+                    
+                    JUnit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../java/other.html">
+            
+                <a href="../java/other.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../java/servlets.html">
+            
+                <a href="../java/servlets.html">
+            
+                    
+                    Servlets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../java/streams.html">
+            
+                <a href="../java/streams.html">
+            
+                    
+                    Streams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../java/useful-classes.html">
+            
+                <a href="../java/useful-classes.html">
+            
+                    
+                    Useful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../web.md">
+            
+                <span>
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" >
+            
+                <span>
+            
+                    
+                    OCA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.15.1" data-path="../java/OCA/chapter1.html">
+            
+                <a href="../java/OCA/chapter1.html">
+            
+                    
+                    Chapter 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15.2" data-path="../java/OCA/chapter2.html">
+            
+                <a href="../java/OCA/chapter2.html">
+            
+                    
+                    Chapter 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15.3" data-path="../java/OCA/chapter3.html">
+            
+                <a href="../java/OCA/chapter3.html">
+            
+                    
+                    Chapter 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15.4" data-path="../java/OCA/chapter4.html">
+            
+                <a href="../java/OCA/chapter4.html">
+            
+                    
+                    Chapter 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15.5" data-path="../java/OCA/chapter5.html">
+            
+                <a href="../java/OCA/chapter5.html">
+            
+                    
+                    Chapter 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15.6" data-path="../java/OCA/chapter6.html">
+            
+                <a href="../java/OCA/chapter6.html">
+            
+                    
+                    Chapter 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15.7" data-path="../java/OCA/apis.html">
+            
+                <a href="../java/OCA/apis.html">
+            
+                    
+                    APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15.8" data-path="../java/OCA/questions.html">
+            
+                <a href="../java/OCA/questions.html">
+            
+                    
+                    Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" >
+            
+                <span>
+            
+                    
+                    OCP
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../java/OCP/chapter1.html">
+            
+                <a href="../java/OCP/chapter1.html">
+            
+                    
+                    Chapter 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../java/OCP/chapter2.html">
+            
+                <a href="../java/OCP/chapter2.html">
+            
+                    
+                    Chapter 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Gradle
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../gradle-snippets.md">
+            
+                <span>
+            
+                    
+                    Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../gradle/create-project.html">
+            
+                <a href="../gradle/create-project.html">
+            
+                    
+                    Creating a project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../gradle-intro.md">
+            
+                <span>
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../gradle/groovy.html">
+            
+                <a href="../gradle/groovy.html">
+            
+                    
+                    Groovy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../gradle-libraries.md">
+            
+                <span>
+            
+                    
+                    Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../gradle/other.html">
+            
+                <a href="../gradle/other.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Machine Learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="definitions.html">
+            
+                <a href="definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="jupyter.html">
+            
+                <a href="jupyter.html">
+            
+                    
+                    Jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.3" data-path="nns.html">
+            
+                <a href="nns.html">
+            
+                    
+                    Neural Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="python.html">
+            
+                <a href="python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="regression.html">
+            
+                <a href="regression.html">
+            
+                    
+                    Regression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="research.html">
+            
+                <a href="research.html">
+            
+                    
+                    Research
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="tensorflow.html">
+            
+                <a href="tensorflow.html">
+            
+                    
+                    Tensorflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="unsupervised.html">
+            
+                <a href="unsupervised.html">
+            
+                    
+                    Unsupervides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Tech
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../tech/angular.html">
+            
+                <a href="../tech/angular.html">
+            
+                    
+                    Angular
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../tech/devops.html">
+            
+                <a href="../tech/devops.html">
+            
+                    
+                    Devops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../tech/gitbook.html">
+            
+                <a href="../tech/gitbook.html">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../tech/gradle.md">
+            
+                <span>
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../tech/other-tech.html">
+            
+                <a href="../tech/other-tech.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../tech/rails.html">
+            
+                <a href="../tech/rails.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../tech/swagger.html">
+            
+                <a href="../tech/swagger.html">
+            
+                    
+                    Swagger
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Neural Networks</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="neural-networks">Neural Networks</h1>
+<h2 id="cnns-in-tensorflow">CNNs in Tensorflow</h2>
+<p><strong>Convolutional Neural Networks</strong> (CNNs) contain multiple copies of the same neuron, and all the neurons share the same weights, bias and activation function. As a result, the neuron can be &apos;reused&apos; in different parts of the input.</p>
+<p>CNNs operate differently from traditional NNs in which every neuron in a layer is connected to every neuron in the previous layer. This type of connection is general purpose and makes no assumptions about the features in the input data, meaning that it tends to be expensive in terms of memory and computation.  </p>
+<p>Each neuron in a CNN however is only connected to a few nearby local neurons in the previous layer, and the neurons share the same weights and biases. This type of structure only makes sense when the data is spatial, and has local features that can be extracted. So it makes sense to apply a small window around a set of pixels in order to look for images features. By using the same weights, the new assumes that the feature is equally likely to occur at every input position. This means the window can search over the whole image, and can be scaled and rotated.</p>
+<p><strong>Feature engineering</strong> is the process of extracting useful patterns from the input data in order to help the predictive model understand the true nature of the problem. CNNs are extremely good at not only finding features but also combining them together to increase the complexity of the patterns. The final layers use these generated features for the task at hand. Good feature learning significantly increases the accuracy of the applied machine learning algorithms in a way that would be too expensive for the machine learning itself.</p>
+<p>A kernel which sums adjacent pixels and averages them results in blurring an image. A kernel which only subtracts two adjacent pixels serves to highlight edges, as pixels of similar intensity will subtract to zero. This is useful for the beginning layers of a CNN.</p>
+<p>The numpy library is typically not enough for deep learning.</p>
+<h3 id="common-kernels">Common kernels</h3>
+<h4 id="edge-detection">Edge detection</h4>
+<p>A kernel of just two values, one negative and one positive, will reveal edges, as edges tend to have dissimilar adjacent pixel values.</p>
+<hr>
+<h2 id="recurrent-neural-networks">Recurrent Neural Networks</h2>
+<p>Traditional neural networks are not well suited to sequential data. This is because a NN does not remember the data it has analysed. However, if there are sequential dependencies in the data (e.g. if its sunny today it is more likely to be sunny tomorrow). In this case we need to move to another type of model like a <strong>recurrent neural network</strong>.</p>
+<p>Has one layer but also has a state so that it can remember the analysis that it has up to this point. This state recurs back into the net with each new input.</p>
+<p>Unlike Convolutional Neural Networks (CNNs) which use forward propagation, or rather, move forward through its pipeline, RNNs utilize backpropogation, or circling back through the pipeline to make use of the &quot;memory&quot; mentioned above.</p>
+<p>There are many different types of recurrent neural network:</p>
+<ol>
+<li><p>Recursive neural network. TODO</p>
+</li>
+<li><p>Recursive neural tensor networks. TODO</p>
+</li>
+<li><p><strong>Hopfield networks</strong>.</p>
+</li>
+<li><p><strong>Echo state networks</strong>. This is an RNN with a sparsely connected hidden later (~1%). The main interest in these is that because the only weights that are modified during training are for the synapses that connect the hidden neurons to output neurons. Thus, the error function is quadratic and can be easily differentiated to a linear system.</p>
+</li>
+</ol>
+<p>RNNs are extremely sensitive to changes in their parameters due to <strong>vanishing</strong> or <strong>exploding</strong> gradient, meaning trainign is difficult</p>
+<p><strong>Long-short term memory model (LSTM)</strong> is an abstraction of computer memory. 4 main elements: me,ory cell: holding data 3 logisti gates: right (input) writes data into memory cell, readoutput reads data and sens to recirent net -1 and 1 to determine how much sent, keep  gate delete data from the info cell. can remember what it needs and can forget what it no longer needs.   the gates take a value between 0 and 1. Manipulates data in the information. Use logistic gates as they have nice derivatives. By manipulating values through the gates, we eliminate the vanishing gradient and exploding gradient problems from before. By allowing the network to forget states that are no longer needed, the computational load of the model decreases dramatically.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="jupyter.html" class="navigation navigation-prev " aria-label="Previous page: Jupyter">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="python.html" class="navigation navigation-next " aria-label="Next page: Python">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Neural Networks","level":"1.6.3","depth":2,"next":{"title":"Python","level":"1.6.4","depth":2,"path":"ml/python.md","ref":"ml/python.md","articles":[]},"previous":{"title":"Jupyter","level":"1.6.2","depth":2,"path":"ml/jupyter.md","ref":"ml/jupyter.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-plus":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IBM tech notes","gitbook":"*","description":"Notes from my time at IBM"},"file":{"path":"ml/nns.md","mtime":"2018-10-12T13:36:14.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-12T13:45:53.520Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
