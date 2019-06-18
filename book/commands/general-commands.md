@@ -207,6 +207,8 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 
 * `ls -l | grep <search term>`
 
+* `ctrl` + `R` : search history of commands
+
 #### iTerm
 
 * `cmmd` + `option` + `/`

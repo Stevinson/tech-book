@@ -48,6 +48,10 @@
 
 * `git branch -f <branchName> <hash + relative move>` - reassign a branch to a specific commit
 
+* `git branch -d feature/login` : delete a local branch
+
+* `git push origin --delete feature/login` : delete a remote branch
+
 * The following code brings in changes from master to your branch and then pushes your branch:
 
 ```
@@ -57,6 +61,8 @@ git rebase master
 git checkout master
 git merge <branch>
 ```
+
+* `git pull --rebase origin <branch name>` : update your current branch
 
 * This removes untracked files from the working tree. The -f is short for —force and overrides the default functionality that git refuses to delete files or directories. The -x means that the standard ignore rules set by the .gitignore file.
 

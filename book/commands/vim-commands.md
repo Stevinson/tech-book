@@ -63,6 +63,58 @@
 
 Similarly, to copy five lines in vim, use the yank command again, but precede it with the number 5:
 
+* `{` and `}` : jump backward or forward by a paragraph.
+
+* `w` and `b` to jump forward and backwards a word at a time.
+
+* `i` : jumps the to the end of the current word.
+
+* `{` and `}` : jump backward or forward by a paragraph.
+
+* `u` undo's the last action
+
+* `ctlr` + `r` : redo the last action
+
+* `/search_term` and then `n` to find the next occurance and `N` to find the previous
+
+* `:3` goes to line 3
+
+* `:split <filename>` : split view into two views
+
+* `ctlr` + `w` : split between files when in spkit mode
+
+* `#*` : searches for the next instance of the word under the cursor
+
+* `s` : deletes the character under the cursor and enters insert mode
+
+* `yw` : copy the word under the cursor as long as the cursor is over the first letter
+
+* `yy` : copy the whole line
+
+* `p` : prints the copied word
+
+* `G` : move cursor to the last line of the file but stay in insert mode
+
+* `x` : deletes the character under the cursor
+
+* `X` : deletes the character before the cursor
+
+* `df<letter>` : deletes from the cursor to the first occurance of the specified letter
+
+* `<number>dw` : deletes a specified number of words (cursor has to be at beginning of the word)
+
+* `cw` : i.e. create word - delets the word and enters insert mode
+
+* `:%s/fff/rrrrr/g` - For all lines in a file, find string "fff" and replace with string "rrrrr" for each instance on a line
+
+* `:PluginInstall` : used to turn on the Vundle extensions
+
+* `5dd` : will delete the next 5 lines.
+
+* `:sp <file_path>` : enters splitscreen horizontally
+
+* `vd <file_path>` : enters splitscreen vertically
+
 ### Vim-Latex Commands
 
 * `:ver` - Check the version
@@ -80,3 +132,5 @@ cd ~/.vim/bundle && \
 git clone https://github.com/tpope/vim-sensible.git
 ```
 Now sensible.vim is installed.
+
+* **Vundle** is a VIM extension manager, to be thought of as the pip for VIM.
