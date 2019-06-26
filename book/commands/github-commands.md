@@ -157,3 +157,11 @@ $ git config --global difftool.bc3.trustExitCode true
 $ git config --global merge.tool bc3
 $ git config --global mergetool.bc3.trustExitCode true
 ```
+
+## Tags
+
+Tags can be used to version and they just point to a commit.
+
+* `git fetch --all --tags --prune` : Fetch all the remotes, including all the tags
+
+* `git checkout tags/<tag_name> -b <branch_name>` : Checkout to the tag 

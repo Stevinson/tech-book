@@ -26,7 +26,7 @@
 	* [Threads](compsci/threads.md)
 	* [Websockets](compsci/websockets.md)
 	* [Windows OS](compsci/windows.md)
-* [Java](java/introduction.md)
+* Java
 	* [Annotations](java/annotations.md)
 	* [Comparison with other languages](java/compare.md)
 	* [Enum](java/enum.md)
@@ -44,7 +44,7 @@
 		* [Lists](java/lists.md)
 		* [Sets](java/sets.md)
 		* [Maps](java/maps.md)
-* 4 Gradle
+* Gradle
 	* [General](gradle-intro.md)
 	* [Libraries](gradle-libraries.md)
 	* [Code](gradle-snippets.md)
@@ -53,6 +53,11 @@
 	* [Neural Networks](ml/nns.md)
 	* [Regression](ml/regression.md)
 	* [Tensorflow](ml/tensorflow.md)
+* Python
+	* [Basics](python/python.md)
+	* [Conda](python/conda.md)]
+	* [Django](python/django.md)
+	* [Packages](python/packages.md)]
 * Tech
 	* [Angular](tech/angular.md)
 	* [Devops](tech/devops.md)

@@ -37,9 +37,9 @@ To create a view you need:
 
 * One separates the page design from the implementation of the view by using a template. To achieve this you create a directory called templates in the application directory. The settigsn for these are contained in the TEMPLATES section in settings.py. By default this looks for a directory called templates in each of the app directories. From within the views logic you can access the template by using `django.template.loader` and `loader.get_template(<relative path from template directory>)`.
 
-* To call python code in django templates use the `{{ }}` syntax to access variables from the view and the `{% %}` syntax to call functions.
+* To call python code in django templates use the `{\{ }\}` syntax to access variables from the view and the `{\% \%}` with inner percentage sign syntax to call functions.
 
-* urls can be directly accessed in templates with the followiong syntax: `{% url 'app_name:url_name  %}`
+* urls can be directly accessed in templates with the followiong syntax: `{\% url 'app_name:url_name  \%}`
 
 * **Generic views** abstract common patterns to the point where one often doesn't need to write python code to develop an app. These include `ListView` and `DetailView`.
 
@@ -93,3 +93,10 @@ Off the back of the model file Django not only creates the database schema but a
 ## Style
 
 * Django looks for static files in a directory called `static` inside the application directory.
+
+## Command Line 
+
+* `python manage.py `
+
+
+

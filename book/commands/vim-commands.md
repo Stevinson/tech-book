@@ -115,6 +115,11 @@ Similarly, to copy five lines in vim, use the yank command again, but precede it
 
 * `vd <file_path>` : enters splitscreen vertically
 
+* `V` : enter visual mode, selecting by line. Then press `y` to copy and `d` to cut. Then press `P` to paste. 
+
+
+
+
 ### Vim-Latex Commands
 
 * `:ver` - Check the version
