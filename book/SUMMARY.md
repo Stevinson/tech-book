@@ -49,10 +49,14 @@
 	* [Libraries](gradle-libraries.md)
 	* [Code](gradle-snippets.md)
 * Machine Learning
+	* [Algorithms](ml/ml.md)
 	* [Definitions](ml/definitions.md)
+	* [Jupyter](ml/jupyter.md)
 	* [Neural Networks](ml/nns.md)
 	* [Regression](ml/regression.md)
 	* [Tensorflow](ml/tensorflow.md)
+	* [Unity](ml/unity.md)
+	* [Unsupervised](ml/unsupervised.md)
 * Python
 	* [Basics](python/python.md)
 	* [Conda](python/conda.md)]
