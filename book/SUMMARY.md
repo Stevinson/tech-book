@@ -46,10 +46,6 @@
 		* [Lists](java/lists.md)
 		* [Sets](java/sets.md)
 		* [Maps](java/maps.md)
-* Gradle
-	* [General](gradle-intro.md)
-	* [Libraries](gradle-libraries.md)
-	* [Code](gradle-snippets.md)
 * Machine Learning
 	* [Algorithms](ml/ml.md)
 	* [Definitions](ml/definitions.md)
