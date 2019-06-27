@@ -33,6 +33,8 @@
 	* [Exceptions and Errors](java/Exceptions-and-errors.md)
 	* [Facade](java/facade.md)
 	* [Factories](java/factories.md)
+	* [Gradle](java/gradle.md)
+	* [Groovy](java/groovy.md)
 	* [Guice](java/guice.md)
 	* [JUnit](java/junit.md)
 	* [Design Patterns](java/design-patterns.md)

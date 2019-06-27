@@ -2,7 +2,7 @@
 
 ## HTTP Status Codes
 
-(Here)[https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html] is some documentation for HTTP status codes.
+[Here](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) is some documentation for HTTP status codes.
 
 ```Java
 import javax.ws.rs.core.Response.Status;
@@ -168,6 +168,6 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range
 
 The range of a http request header indicates the part of a document that the server should return.
 
-Range: <unit>=<range-start>-
+Range: `<unit>=<range-start>-`
 
 If the server sends back ranges, it uses the **206 Partial Content** for the response. If the ranges are invalid, the server returns the **416 Range Not Satisfiable error**. The server can also ignore the Range header and return the whole document with a 200 status code.

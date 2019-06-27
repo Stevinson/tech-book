@@ -51,6 +51,8 @@ for multiplier in create_multipliers():
 
 * Python is smart enough not to import the same module twice, but depending on the point at which each module is attempting to access functions or variables defined in another, problems may occur.
 
+* Interfaces are not necessary in Python as it supports multiple inheritance and duck typing which means that the places in Java where you must have an interface, you don't in Python.
+
 ### APIs
 
 * `datetime.timedelta(days=1)` is a means of getting a relative timestamp.
