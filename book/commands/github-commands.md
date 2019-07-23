@@ -32,6 +32,8 @@
   * `set-url <origin> <https://github.com/Stevinson/events-microservice.git>` : To change the upstream remote of the directory:
   * `add <origin> <https://github.com/Stevinson/tech-book.git>` : To add a remote upon creation of the repo.
 
+* `git commit --amend --no-edit` : Add the latest changes to the prvious commit
+
 ### Branching
 
 * `git branch -u origin edward-stevinson`
@@ -97,12 +99,20 @@ git push origin --delete <branch-name>
 * To remove untracked files from the working tree use the `clean` command. It does this by recursively removing files that are not under version.
   * `-x` This also removes ignored files.
 
+* `git checkout -b <new-branch> <old-branch>` : Creates a new branch off another branch
+
 ## Merging and rebasing
 
 * `git mergetool` - To deal with merges
 
 * `git rebase -i HEAD~4` - interactive rebasing. This opens up a UI. Select the number of commits you want the option of refactoring. It creates a new series of commits to represent the changes, starting from where you selected to go up to in the original command.
 
+
+## Viewing Changes
+
+* `git diff COMMIT~ COMMIT` : will show you the difference between that COMMIT's ancestor and the COMMIT.
+
+* `git show COMMIT` : will show that COMMIT's data. 
 
 ## Resetting changes
 
@@ -157,6 +167,10 @@ $ git config --global difftool.bc3.trustExitCode true
 $ git config --global merge.tool bc3
 $ git config --global mergetool.bc3.trustExitCode true
 ```
+
+* `git log --graph --oneline --all` : show a tree of all the commits.
+
+* `git rm --cached <file>` : this removes a file that was being tracked but is now in the .gitignore
 
 ## Tags
 

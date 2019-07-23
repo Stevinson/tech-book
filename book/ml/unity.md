@@ -73,3 +73,11 @@ Tensorboard must be used to see these.
 * Value estimate:
 
 * Value loss:
+
+## `mlagents`
+
+* A `UnityEnvironment` contains brains which are responsible for deciding the actions of their associated agents.
+
+* States refer to a vector of variables that correspond to relevant aspects of the environment for an agent. 
+
+* Observations refer to a set of relevant pixel-wise visuals for an agent.

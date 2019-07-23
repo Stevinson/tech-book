@@ -24,6 +24,8 @@ The file `.bashrc` contains the aliases for commands.
 
 * The `|` creates pipelines. This means that the output from the first command is connected to the input of the next command.
 
+* `dscl . list /Users | grep -v “^_”` : lists all the users on the mac
+
 ### File Management
 
 * `ls -altr`

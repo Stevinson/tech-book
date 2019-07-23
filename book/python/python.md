@@ -53,6 +53,10 @@ for multiplier in create_multipliers():
 
 * Interfaces are not necessary in Python as it supports multiple inheritance and duck typing which means that the places in Java where you must have an interface, you don't in Python.
 
+* When you run a program in python the interpreter compiles it bytecode and stores it in The `__pycache__` folder (The names will be the same as the python files but with `.pyc` or `.pyo` extensions). 
+
+* To loop over non-None items in an iterable use: `for i in filter(None, iter)`
+
 ### APIs
 
 * `datetime.timedelta(days=1)` is a means of getting a relative timestamp.
@@ -63,11 +67,13 @@ for multiplier in create_multipliers():
 
 #### Regex
 
-* {m,n} causes the resulting regular expression to match from m to n repetitions
+* `{m,n}` causes the resulting regular expression to match from m to n repetitions
 
 * `\s` : When the UNICODE flag is not specified, this matches any whitespace character
 
 * `\S` : When the UNICODE flag is not specified, this matches any NON-whitespace character
+
+* `\b` : matches the end or beginning of a word, i.e. matches on the boundary of a `\w` and `\W`.
 
 * `+` : Causes the regex to match 1 or more repetitions of the preceeding regex.
 
@@ -80,6 +86,8 @@ for multiplier in create_multipliers():
 * `!` : is a negative search, i.e. matches if the regex doesn't match next
 
 * `*` : 0 or more repetitions of the regex
+
+* `.` : Wildcard character - any characger apart from a new line
 
 ### Concepts
 
@@ -114,6 +122,7 @@ A metaclass is the class of a class, i.e. it defines how a class behaves (as opp
 The inner class `Meta` is used in Django to provide metadata to the `ModelForm` class. Any information that is not a form `Field` can be considered metadata. Some examples are `model` - the model class to use for creating Form, and `fields` - a list of fields to include in the Form. The decision was made to use this instead of just having class sttributes as it provides a cleaner API..
 
 ---
+
 # String Literals
 
 * When a string is prefixed with an `r`, i.e. `r'string'`, which means that the string has a slightly different syntax than a plain string literal. Backslashes are no longer *escape sequences* (i.e. newlines, tabs, backspaces, etc.). Backslashes must be doubled up in plain string literals to avoid them being taken as escape sequences. This exists because regexs are heavy with backslashes. 
@@ -126,3 +135,24 @@ The inner class `Meta` is used in Django to provide metadata to the `ModelForm` 
 ## Class Methods
 
 The `classmethod` decorator means that the class receives the class as implicit first argument (just like an instance method receives an instance). It differs from a `@staticmethod` in that whilst it is bound to the class and not the object, it cannot access or modify the class state (e.g. a class variable that is applicable to all instances),
+
+
+## OOP
+
+* `self` is used for the first argument to instance methods whilst `cls` is used for the first argument to class methods.
+
+---
+
+
+## Imports
+
+---
+
+### Create a CLI
+
+* `from argparse import ArgumentParser`
+
+1. Initialise an `Argumentparser`
+1. Add an argument with a long name, flag and a help message.
+1. `required` argument flag
+1. `default` argument

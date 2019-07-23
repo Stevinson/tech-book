@@ -69,3 +69,7 @@ Scrolls over the tabs
 * `cmmd` + `shift` + `J`
 
 Changes to the Java perspective.
+
+## JetBrains
+
+* `alt` + `cmmd` + `L`: reformat json 

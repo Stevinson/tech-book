@@ -34,6 +34,8 @@ Technologies that only have a few commands notes have been bunched together here
 
 * `cmmd` + `backspace` : deletes the line the cursor is on.
 
+* `cmmd` + `fn` + `left`: go to top of file
+
 ### To debug a server
 
 1. `wlp/bin ./server debug <server_name>`

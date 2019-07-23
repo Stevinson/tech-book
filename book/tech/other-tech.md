@@ -75,3 +75,5 @@ The `pom.xml` can be generated through Eclipse by using the m2e plugin. The step
  * **Typescript** is an open-source language developed by Microsoft that is a superset of Javascript. It adds optional static typing to the language.
 
  * **JFrog Artifactory** is a universal repository manager.
+
+ * **kuda** for gpu for deep learning
