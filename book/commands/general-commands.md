@@ -195,7 +195,9 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 
 #### Searching within Terminal
 
-* `find . name <search_term> | grep <search_term>`
+* `find . | wc -l`: Count the number of files in a directory
+
+* `find . | grep <search_term>`
   This searches for a search term within the name of the all the files in the current directory and lower.
 
 * `grep [OPTIONS] PATTERN [FILE...]`
@@ -241,6 +243,20 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 
 * `jar tf <jar_name>`
   Displays the contents of a jar.
+
+
+## Servers
+
+* `ssh -i S-Eng_key.pem ubuntu@10.11.97.174` : connect to a remote server
+
+* Create a file called `config` in the `.ssh` directory. In this one can create aliases to scp and ssh in the following format: 
+  ```
+  Host section-pipeline
+  HostName 10.11.97.174
+  User ubuntu
+  Port 22
+  IdentityFile
+  ```
 
 ## Other
 
@@ -300,3 +316,9 @@ e.g. `#!/bin/sh` is an example of a shebang, which tells the parent shell which 
 ### Synchronising files
 
 `rsync`: see common usages [here](https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/).
+
+##
+
+Opens file that updates
+
+`less +F <file_oath_to_log>

@@ -71,6 +71,8 @@ ENTRYPOINT
 
 **Docker Compose** is a tool for defining and running multi-container Docker applications. 
 
+* `docker-compose up -d`
+
 ## Commands
 
 ### Fundamental Commands
@@ -114,8 +116,28 @@ docker rmi # delete a docker image
 docker rm $(docker ps -a -q) # delete all the docker containers
 ```
 
+# Docker build
+
+* `docker build -t eigentech/section_pipeline:test -f docker_deployment/Dockerfile .`
+
 ### i2 Docker Commands
 
 * `docker exec --user db2inst1 -t -i db2 /bin/bash -i`
 
 Use this to get into the docker instance of db2 on mac.
+
+## Moving Docker Images
+
+### Docker Hub
+
+* `docker push eigentech/section_pipeline:tagname` : push an image 
+
+### Moving Locally
+
+```
+docker save -o <dest_path.tar> <image name> # Save a local images as a tar file
+
+
+
+docker load -i <path to image tar file> # 
+```

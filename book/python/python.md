@@ -57,6 +57,8 @@ for multiplier in create_multipliers():
 
 * To loop over non-None items in an iterable use: `for i in filter(None, iter)`
 
+* A stand alone asterisk as an argument forces all the following arguments to be keyword-only parameters.
+
 ### APIs
 
 * `datetime.timedelta(days=1)` is a means of getting a relative timestamp.
@@ -156,3 +158,7 @@ The `classmethod` decorator means that the class receives the class as implicit 
 1. Add an argument with a long name, flag and a help message.
 1. `required` argument flag
 1. `default` argument
+
+## Testing
+
+To get code coverage use the following: `--cov=section_pipeline --cov-report term-missing`
