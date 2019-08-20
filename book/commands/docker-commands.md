@@ -137,7 +137,8 @@ Use this to get into the docker instance of db2 on mac.
 ```
 docker save -o <dest_path.tar> <image name> # Save a local images as a tar file
 
-
+scp -i <path_to_key> foobar.txt your_username@remotehost.edu:/some/remote/directory
+# ubuntu@10.11.97.174
 
 docker load -i <path to image tar file> # 
 ```
