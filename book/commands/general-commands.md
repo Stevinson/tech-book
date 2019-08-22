@@ -38,6 +38,26 @@ The file `.bashrc` contains the aliases for commands.
 
 * `brew cask search <app_name>`
 
+* `tee benchmarking-file-{1..1000}.txt < benchmarking-file.txt >/dev/null` - copy a file multiple times
+
+* To find the average size of files in a directory:
+
+```
+find -x . -type f -maxdepth 1 -exec sh -c 'stat -f '%z' "${@}"' _ '{}' + |
+LC_ALL=C awk -v pwd="${PWD}" '
+   BEGIN{ sum=0; count=0; }
+   { sum+=$1; ++count; }
+   END{
+        if (count == 0) exit;
+        printf ("number of files: %d\n", count);
+        printf ("average file size in B: %.5f\n", sum/count);
+        printf ("average file size in KB: %.5f\n", (sum/count) / 1024);
+        printf ("average file size in MB: %.5f\n", (sum/count) / (1024*1024));
+        printf ("directory: %s\n", pwd);
+   }
+'
+```
+
 ### Running Processes
 
 * `ps`

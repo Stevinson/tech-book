@@ -142,3 +142,15 @@ scp -i <path_to_key> foobar.txt your_username@remotehost.edu:/some/remote/direct
 
 docker load -i <path to image tar file> # 
 ```
+
+## docker-compose
+
+* To set performance limits for the docker images.
+
+```
+deploy:
+    resources: 
+	    limits:
+		    memory: 32G
+```
+
