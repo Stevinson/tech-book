@@ -4,6 +4,13 @@
 
 Square brackets are a shorthand notation for performing a conditional test.
 
+## Loops
+
+```
+for i in {1..50}:
+do printf "Test";
+done
+```
 
 ## Outputting to terminal of file
 

@@ -154,3 +154,22 @@ deploy:
 		    memory: 32G
 ```
 
+## Volumes and Disk Space
+
+## Spin up image and keep open
+
+`docker run --rm -d -it <image> tail -f /dev/null`
+
+## Other
+
+* Spin up an image, copy a file, and close
+
+```
+id=$(docker create <docker-image-name>)                                                                                                                                                                       
+docker cp $id:/usr/src/conda.tar.gz - > conda.tar.gz
+docker rm -v $id
+```
+
+* `docker run --rm -d -it <image> tail -f /dev/null` - Spin up a container and keep open
+
+

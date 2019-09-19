@@ -206,3 +206,20 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Hom
 ```
 export PATH=/opt/apache-maven-3.5.4/bin:$PATH
 ```
+
+---
+
+## Poetry
+
+Clear caches:
+
+```
+poetry cache:clear --all pypi
+poetry cache:clear --all nexus
+```
+
+## Pip
+
+```
+pip install --index-url https://pypi.python.org/simple <package-name> # This downloads from a specific index instead of the deafult
+```
