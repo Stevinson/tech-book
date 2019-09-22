@@ -188,4 +188,12 @@ Tags can be used to version and they just point to a commit.
 
 * `#<code>` - does not run the command entered
 
+## Stashing
 
+* `git stash`
+
+* `git stash apply`
+
+* `git stash list` - see stashed files affected
+
+* `git stash show -p` - show the changed content in the stashed files
