@@ -182,7 +182,17 @@ Tags can be used to version and they just point to a commit.
 
 ## lfs - large file storage
 
-* `GIT_LFS_SKIP_SMUDGE=1 git clone https://stevinson@bitbucket.org/eigentech/mvp.git` - disable smudge - i.e. disable lfs from actually downloading files
+### Setup
+
+```
+git lfs install
+git lfs track "*.jpg"
+git add .gitattributes
+```
+
+### Usage
+
+* `GIT_LFS_SKIP_SMUDGE=1 git clone https://stevinson@bitbucket.org/eigentech/mvp.git` - disable smudge - i.e. disable lfs from actually downloading files 
 
 * `<> !!` - places the code on the line above where the exclamation marks are
 
