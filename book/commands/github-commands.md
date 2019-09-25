@@ -207,3 +207,7 @@ git add .gitattributes
 * `git stash list` - see stashed files affected
 
 * `git stash show -p` - show the changed content in the stashed files
+
+* `git stash save <stash_name>` - save a stash with a specific name
+
+* `git stash pop stash@{n}` - apply a stash from its index and remove it from the stash stack

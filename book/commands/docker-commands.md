@@ -172,4 +172,8 @@ docker rm -v $id
 
 * `docker run --rm -d -it <image> tail -f /dev/null` - Spin up a container and keep open
 
+# Volumes
 
+* `docker volume ls`
+
+* `docker inspect <volume_name>`

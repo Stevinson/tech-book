@@ -342,3 +342,13 @@ e.g. `#!/bin/sh` is an example of a shebang, which tells the parent shell which 
 Opens file that updates
 
 `less +F <file_oath_to_log>
+
+## Disk Space
+
+* `df` - Lists disk space on mounted disks
+	* `-h` - human readable format
+	* `--total` - return a total as well
+
+* `du` - Lists the memory usage of files and directories
+	* `-h` - in human readable format
+	* `-c <directory_name>` - to view the total for a directory
