@@ -241,18 +241,6 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 * `cmmd` + `D`
   Splits the current tab into two panes vertically.
 
-* `cmmd` + `shift` + `D`
-  Splits the current tab into two panes horizontally
-
-* `ctrl` + `cmmd` + `arrows`
-  Resize the split panes
-
-* `cmmd` + `option` + `arrows`
-  Jumps between split panes
-
-* `cmmd`
-  Whilst holding the command button, one can select many continuous selections.
-
 #### File manipulation and inspection
 
 * `sed 's/FindThisWord/ReplaceWithThisWord/g' file.txt`
@@ -292,9 +280,9 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 - rm -Rf <directory>
   This deletes all the contents of a directory without having to type yes to each sub-directory.
 
-  `find . \! -name 'file' -delete`
+  `find . -name '*filepattern' -delete`
 
-  This deletes all files apart from the one specified.
+  This deletes all files in this (and all recursive directories!) whose name matches the patter.
 
   - tr [-Ccsu] string1 string2
 

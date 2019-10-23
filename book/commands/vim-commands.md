@@ -63,6 +63,8 @@
 
 Similarly, to copy five lines in vim, use the yank command again, but precede it with the number 5:
 
+* `y<digits>l` : copies a specified number of characters on the line with the cursor (including the charaacter the cursor is on).
+
 * `{` and `}` : jump backward or forward by a paragraph.
 
 * `w` and `b` to jump forward and backwards a word at a time.

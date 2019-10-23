@@ -20,7 +20,7 @@ To execute these operations we must launch the graph into a session.
 
 This is so efficient because instead of returning to Python all the time, it creates all the operations in the form of graphs and executes them once with the highly optimised backend.
 
-
+* A `Graph` contains a set of `Operation` objects, which represent the units of comuptation and `Tensor` objects which represent the units of data betweeen operations.
 ---
 
 * variable method
@@ -120,3 +120,17 @@ imgplot = plt.imshow(array)
 imgplot.set_cmap('gray')
 plt.show(imgplot)
 ```
+
+### To be placed
+
+* `DataSet` : look this up
+
+## Tensorflow Models
+
+When you train a model with tensorflow, various checkpoint files are created to save them:
+
+1. Meta graph files that save the complete tensorflow graph (e.g. variables, operations) and has the extension `.meta`
+2. Checkpoint files that hold the values of weights, biases, gradients, etc. Instead of the old `ckpt` extension there are now three files:
+	* `index` file that is a table of tensors to `BundleEntryProto` which describes the metadata of a tensor
+	* `data` file that holds all the variables as a `TensorBundle`
+	* `checkpoint` that keeps a record of the latest checkpoint files saved

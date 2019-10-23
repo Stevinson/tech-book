@@ -59,6 +59,8 @@ for multiplier in create_multipliers():
 
 * A stand alone asterisk as an argument forces all the following arguments to be keyword-only parameters.
 
+* `dir(<class>)` will return a list of all the sttributes of a class.
+
 ### APIs
 
 * `datetime.timedelta(days=1)` is a means of getting a relative timestamp.

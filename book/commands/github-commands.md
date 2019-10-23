@@ -182,6 +182,10 @@ Tags can be used to version and they just point to a commit.
 
 ## lfs - large file storage
 
+* `git lfs track <filename>` : Then add and commit as usual
+
+* `git lfs status` : gives a list of all the files tracked by lfs
+
 ### Setup
 
 ```
@@ -191,6 +195,11 @@ git add .gitattributes
 ```
 
 ### Usage
+ 
+```
+git lfs install --skip-smudge
+git reset hard HEAD
+```
 
 * `GIT_LFS_SKIP_SMUDGE=1 git clone https://stevinson@bitbucket.org/eigentech/mvp.git` - disable smudge - i.e. disable lfs from actually downloading files 
 
@@ -211,3 +220,17 @@ git add .gitattributes
 * `git stash save <stash_name>` - save a stash with a specific name
 
 * `git stash pop stash@{n}` - apply a stash from its index and remove it from the stash stack
+
+## Delete file from repo history
+
+```
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" \
+  --prune-empty --tag-name-filter cat -- --all
+
+git pull --allow-unrelated-histories  # Correlate remote with local
+
+git push origin --force --all  
+```
+
+See: [Here](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository) for full details
