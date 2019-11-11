@@ -223,3 +223,13 @@ poetry cache:clear --all nexus
 ```
 pip install --index-url https://pypi.python.org/simple <package-name> # This downloads from a specific index instead of the deafult
 ```
+
+## shred
+
+`shred` overwrites files to hide their contents, adnnn optionally to delte them. It makes them very difficult to recover by a third party. Normally when a file is deleted, that portion of the disk is markes as being ready fir another file to be written to it but the data is still there. shread accomplishes this distruction by overwriting, repeaatedly, the data you want destroyed, replacing it with random data.
+
+* `-u` - delete the file as well as shredding it.
+
+# wget
+
+`wget` is a non-interactive download utility, meaning that it can work in the background or before a user logs in.

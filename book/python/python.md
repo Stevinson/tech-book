@@ -61,6 +61,13 @@ for multiplier in create_multipliers():
 
 * `dir(<class>)` will return a list of all the sttributes of a class.
 
+* `input(message)` takes a user input as a string, with an optional message arg that gets printed to the screen as a prompt. To turn these into integer values use the following:
+
+`a, b = [int(x) for x in input("Enter two numbers below").split()]`.
+
+* `async` keyword: defining a function with `async def` makes it a **coroutine** - which is essentially a function whose execution you can pause. When a thread is waiting it will move on to another coroutine. Using `await` specifies the point at which control is handed back to the event loop. Used when there is IO blocking such as in networking and http requests., 
+
+* 
 ### APIs
 
 * `datetime.timedelta(days=1)` is a means of getting a relative timestamp.
@@ -164,3 +171,11 @@ The `classmethod` decorator means that the class receives the class as implicit 
 ## Testing
 
 To get code coverage use the following: `--cov=section_pipeline --cov-report term-missing`
+
+## Types
+
+### dicts
+
+#### Sorted dicts
+
+* `sorted(dict.iteritems(), key = lambda x: x[1])` : 

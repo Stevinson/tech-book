@@ -8,6 +8,24 @@ CNNs operate differently from traditional NNs in which every neuron in a layer i
 
 Each neuron in a CNN however is only connected to a few nearby local neurons in the previous layer, and the neurons share the same weights and biases. This type of structure only makes sense when the data is spatial, and has local features that can be extracted. So it makes sense to apply a small window around a set of pixels in order to look for images features. By using the same weights, the new assumes that the feature is equally likely to occur at every input position. This means the window can search over the whole image, and can be scaled and rotated.
 
+CNNs make the explicit assumption that the entries are images, which allows one to encode certain properties in the architecture to recognise specific elements in the images.
+
+A CNN is not fully connected but rather learns local patterns in small windows.
+
+CNNs can learn spatial hierarchies of patterns by preserving spatial relationships, i.e. a second layer can learn patterns comprised of the basic elements of the first layer.
+
+Each neuron of the first hidden layer is connected to a small region (5x5) of the input image.
+
+The particular thing about CNNs is that we use the same filter for all the neurons in a hidden layer. This drastically reduces the number of parameters in a network.
+
+We use 32 different filters in the first layer and 64 in the next.
+
+Dropout is a means of regularising a neural network. During the training process, specific neurons may become influenced solely by particular neurons in the previous layer, leading to overfitting. Dropout prevents this by randomly cutting the connections between neurons in successive layers during training. All it does is set a fraction of the inputs to 0.
+
+Max pooling is a sample-based discretisation process, with the objective being to down-sample an input representation (e.g. an image), reducing its dimensionality and allowing assumptions to be made about features in the sub-regions that have been binned. It is done in part to help overfitting. It also reduces the computational cost by reducing the number of parameters to learn. It is often achieved with a max filter, which just replaces a number of values with the single largest value in a specific kernel shape. They are non-overlapping. Pooling is also used in CNNs to make the detection of certain features invariant to scale and orientation changes. They achieve this as they generalise over lower level, complex information. One can think of it as "looking" over the output of several filters and giving an output as long as any of them have a high activation.
+
+Normalising the input data to have a mean of zero means that most of the hidden neurons start with their outputs in the linear region of the activation functions, where training progresses fast. It also improves the convergence properties of backpropagation.
+
 **Feature engineering** is the process of extracting useful patterns from the input data in order to help the predictive model understand the true nature of the problem. CNNs are extremely good at not only finding features but also combining them together to increase the complexity of the patterns. The final layers use these generated features for the task at hand. Good feature learning significantly increases the accuracy of the applied machine learning algorithms in a way that would be too expensive for the machine learning itself.
 
 A kernel which sums adjacent pixels and averages them results in blurring an image. A kernel which only subtracts two adjacent pixels serves to highlight edges, as pixels of similar intensity will subtract to zero. This is useful for the beginning layers of a CNN.

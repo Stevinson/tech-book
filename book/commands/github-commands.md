@@ -170,6 +170,8 @@ $ git config --global mergetool.bc3.trustExitCode true
 
 * `git log --graph --oneline --all` : show a tree of all the commits.
 
+* `git log --name-only` : lists the names of the files that are in the commits
+
 * `git rm --cached <file>` : this removes a file that was being tracked but is now in the .gitignore
 
 ## Tags

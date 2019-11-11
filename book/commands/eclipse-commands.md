@@ -73,3 +73,7 @@ Changes to the Java perspective.
 ## JetBrains
 
 * `alt` + `cmmd` + `L`: reformat json 
+
+* `cmmd` + `alt` + `backtick`: scrolls through all the jetbrains windows
+
+* `cmmd` + `+`/ `-`: open or close a block of code

@@ -1,4 +1,6 @@
-# TensorFlow
+# Tensorflow and Keras
+
+## TensorFlow
 
 **Tensorflow** is an open-source software library for machine learning, which allows you to keep track of all of your models and see visualisations.
 
@@ -134,3 +136,16 @@ When you train a model with tensorflow, various checkpoint files are created to 
 	* `index` file that is a table of tensors to `BundleEntryProto` which describes the metadata of a tensor
 	* `data` file that holds all the variables as a `TensorBundle`
 	* `checkpoint` that keeps a record of the latest checkpoint files saved
+
+
+## Keras
+
+**Keras** is a deep learning library that you can use in conjunction with Tensorflow and several other deep learning libraries.
+
+### `backend`
+
+* Any function that has different behaviour at training time and test times takes a *learning phase* flag.
+
+### Classes
+
+* `Sequential` : A linear stack of layers. Note that before we configure the learning process, which is done via the `compile()` method, we need to provide an optimiser, a loss function and a list of metrics.

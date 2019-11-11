@@ -36,7 +36,9 @@ Built on `numpy`, `scipy`, and `matplotlib` and is used for data mining and data
 
 Described as the Ruby on Rails of Natural Language Processing. Whilst `nltk` is a platform for research, spaCy tries to avoid asking the user to choose between multiple algorithms that devliver equivalent functionality.:wq
 
+## OpenCV
 
+* Some algorithms require the use of opencv types isntead of numpy types and therfore have to be converted forst. this is done in the following manner: `cv.CreateMat(height, width, cv.CV_8U)`
 
 ### Plotting
 
@@ -79,10 +81,11 @@ Creates a tuple out of lists.
 
 * `zip` - makes an iterator that elements from each of the iterables, i.e. returns an iterator of tuples where the i-th tuple contains the i-th element from each of the argument sequences.
 
-## `abc` - Abstract Base Classes
+### `abc` - Abstract Base Classes
 
+### `itertools`
 
-
+* `chain()` : make an iterator that retirns elements from the first iterable until it is exhausted, then proceeds to the next iterable - so that consecutive sequences are treated as a single sequence. e.g. `chain('ABC, 'DEF)` -> A B C D E F
 
 
 

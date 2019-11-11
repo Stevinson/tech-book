@@ -17,3 +17,11 @@ To add imports to notebooks, open the Anaconda GUI, go to the environments tab, 
 * `a`/`b` : add a new cell above or below
 
 * `m` : turn the cell into a markdown cell
+
+* `dd` : deleted the highlighted cell
+
+## Code
+
+* Starting a line with an exclamation mark will run the line as a terminal command.
+
+* `%%capture` at the beginning of a cell will suppress the output.

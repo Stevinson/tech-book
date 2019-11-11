@@ -223,6 +223,8 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 * `grep [OPTIONS] PATTERN [FILE...]`
   grep which stands for global regular expression print, processes text line by line and prints any lines which match a specified pattern.
 
+	* `-w` argument searches for the search term as a stand-alone word (i.e. does not match partials)
+
 * `which <file_name>``
   This locates a file on the path.
 
