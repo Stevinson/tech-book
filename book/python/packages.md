@@ -1,4 +1,4 @@
-# Python Packages
+#Python Packages
 
 ## Image Manipulation
 
@@ -87,5 +87,7 @@ Creates a tuple out of lists.
 
 * `chain()` : make an iterator that retirns elements from the first iterable until it is exhausted, then proceeds to the next iterable - so that consecutive sequences are treated as a single sequence. e.g. `chain('ABC, 'DEF)` -> A B C D E F
 
+### `os`
 
+* `chdir(<path>)` : used to change the current working directory to the one specified.
 

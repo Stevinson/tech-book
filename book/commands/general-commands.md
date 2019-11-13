@@ -225,6 +225,10 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 
 	* `-w` argument searches for the search term as a stand-alone word (i.e. does not match partials)
 
+* `egrep`
+
+	* `-o` argument ("--only-matching") prints only the matching part of the lines
+
 * `which <file_name>``
   This locates a file on the path.
 

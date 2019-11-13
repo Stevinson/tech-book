@@ -14,6 +14,14 @@ done
 
 ## Outputting to terminal of file
 
+```
+[n]>&word
+```
+
+* If `n` is not specified it is 1 (which is the file descriptor), meaning stdout.
+* NB. A file descriptor of 2 is stderr.:wq
+
+
 command > output.txt
 
 The standard output stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, it gets overwritten.
