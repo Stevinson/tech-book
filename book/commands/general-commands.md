@@ -26,6 +26,8 @@ The file `.bashrc` contains the aliases for commands.
 
 * `dscl . list /Users | grep -v “^_”` : lists all the users on the mac
 
+* `sed` - is a stream editor and so can be used for tasks such as searching, replacement or deletion.
+
 ### File Management
 
 * `ls -altr`
@@ -37,6 +39,8 @@ The file `.bashrc` contains the aliases for commands.
 * `brew cask uninstall <app_name>`
 
 * `brew cask search <app_name>`
+
+* `brew tap <tapame>` allows Homebrew to tap into another repository of formulae meaning that you have more installable software. `brew tap` on its own will list all thw taps available.
 
 * `tee benchmarking-file-{1..1000}.txt < benchmarking-file.txt >/dev/null` - copy a file multiple times
 

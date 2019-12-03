@@ -59,7 +59,9 @@ kubectl get services
   - bx cs init
   - bx cs cluster-create —name <cluster-name>
   - To save the IP address and port of something launched on the cluster:
-    `nodeip=$(bx cs workers cloudnativedev | grep -v '^*' | egrep -v "(ID|OK)" | awk '{print $2;}' | head -n1)`
+    ```
+	nodeip=$(bx cs workers cloudnativedev | grep -v '^*' | egrep -v "(ID|OK)" | awk '{print $2;}' | head -n1)
+	```
     And then to get it:
     echo "http://${nodeip}:${port}"
 - To access a cluster:
@@ -95,6 +97,20 @@ kubectl get services
      kubectl describe rs bluecompute-web-deployment
   4.
 
-
-
 ---
+
+Notes made at Eigen:
+
+## kubectl
+
+### kubeconfig files
+
+These files are used to organise information about clusters, users and authentication mechanisms. The `kubectl` command uses kubeconfig files to find the information it needs to choose a cluster and communicate with the API server of the cluster.
+
+By default `kubectl` looks for a file named `config` in the `$HOME/.kube` directory.
+
+## apply
+
+This command manages applications through files defining Kubernetes resources. It creates and updates resources in a cluster.
+
+

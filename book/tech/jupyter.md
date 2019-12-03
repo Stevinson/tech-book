@@ -6,6 +6,8 @@ Click [here](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebo
 
 To add imports to notebooks, open the Anaconda GUI, go to the environments tab, click on the relevant environment, drop-down to uninstalled, search for the import and click apply.
 
+NB. If using notebooks with conda, then make sure the jupyter package is installed via the environment.yml file.
+
 ## Commands
 
 * To launch the app on a mac, go to the directory you want as the working directory: `/anaconda3/bin/jupyter_mac.command notebook`
@@ -16,7 +18,7 @@ To add imports to notebooks, open the Anaconda GUI, go to the environments tab, 
 
 * `a`/`b` : add a new cell above or below
 
-* `m` : turn the cell into a markdown cell
+* `m` / 'y' : turn the cell into a markdown cell
 
 * `dd` : deleted the highlighted cell
 

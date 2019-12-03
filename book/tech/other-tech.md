@@ -76,4 +76,6 @@ The `pom.xml` can be generated through Eclipse by using the m2e plugin. The step
 
  * **JFrog Artifactory** is a universal repository manager.
 
- * **kuda** for gpu for deep learning
+* **nginx** is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+
+

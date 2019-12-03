@@ -77,3 +77,5 @@ Changes to the Java perspective.
 * `cmmd` + `alt` + `backtick`: scrolls through all the jetbrains windows
 
 * `cmmd` + `+`/ `-`: open or close a block of code
+
+* `alt` + `shift` + `C`: view all recent changes

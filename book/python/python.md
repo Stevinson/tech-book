@@ -67,7 +67,8 @@ for multiplier in create_multipliers():
 
 * `async` keyword: defining a function with `async def` makes it a **coroutine** - which is essentially a function whose execution you can pause. When a thread is waiting it will move on to another coroutine. Using `await` specifies the point at which control is handed back to the event loop. Used when there is IO blocking such as in networking and http requests., 
 
-* 
+* `list.remove(value)` will remove all elements of a specified value from a list.
+
 ### APIs
 
 * `datetime.timedelta(days=1)` is a means of getting a relative timestamp.
