@@ -67,3 +67,41 @@ Both the standard output and standard error streams will be copied to the file w
 ## Curly Braces
 
 Curly braces places the output of all the commands in them to the output, instead of just the last command.
+
+## Arrays
+
+`Array[@]` will return all the elements in the array, space separated.
+
+To create a list use parentheses with a space between the elements, i.e. `(elem1 elem2)`
+
+## Conditionals
+
+`[[ ]]` is a command that returns a boolean and thus is used for conditionals in bash.
+
+* `-gt` is greater than
+
+* `-d FILE` conditional on whether a directory exists
+
+## Arguments
+
+* `$@`: returns all the arguments, space separated.
+
+* `$#`: return the number of arguments 
+
+* `shift`: the currect positional parameters are shifted n (or 1 if no number provided) to the left. 
+
+## Case statements
+
+```
+case $1 in 
+	-e|--eigentools)
+		# Do something
+		;;
+	-c|--check)
+		# Do somethign else
+		;;
+	*)
+		# Do something if case statement invalid
+		;;
+esac
+```

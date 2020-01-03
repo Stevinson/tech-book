@@ -10,7 +10,81 @@ Pods are groups of containers that are deployed together on the same worker node
 
 Services are Kubernetes resources that define a logical set of pods and a policy to assess them. Services are exposed in different ways by specifying a type. there are four types: ClusterIP, NodePort, LoadBalancer and ExternalName. Services are the abstraction that allow pods to die and replicate without affecting the performance of the application.
 
-**Minikube**
+
+## Contexts
+
+There is a context file that defines the users, namespaces and clusters and the contexts that they belong to.
+
+```
+kubectl config --kubeconfig=<config-file-name> view 
+# --minify flag to only see the info associated with the current context
+
+kubectl config --kubeconfig=<> set-context pachyderm --cluster=minikube --namespace=demo
+kubectl config --kubeconfig=<config-file> set-credentials experimenter --username=exp --password=some-password
+kubectl config --kubeconfig=config-demo set-cluster scratch --server=https://5.6.7.8 --insecure-skip-tls-verify
+
+minikube config use-context <contex-name>
+
+kubectl config get-contexts
+```
+
+# Minikube
+
+## Profiles
+
+Minikube profiles are condigured inside `.minikube/profiles` and `.minikube/config/config.json`.
+
+```
+kubectl cluster-info
+```
+
+Script to extend the functionality of the minikube commands:
+
+```
+#!/bin/bash
+# only intercept the profile command.
+if [ "$1" == "profile" ]; then
+  shift
+  # current profile
+  if [ $# -eq 0 ]; then
+    cat ~/.minikube/config/config.json | jq -r .profile
+    exit $?
+  fi
+  case "$1" in
+    list)
+      ls -1 ~/.minikube/profiles/
+      ;;
+    describe)
+      cat ~/.minikube/profiles/"$2"/config.json
+      ;;
+    create)
+      shift
+      profile_name="$1"
+      shift
+      minikube start --profile "$profile_name" "$@"
+      minikube profile "$profile_name"
+      if [ $? == 0 ]; then
+        kubectl config use-context "$profile_name"
+      fi
+      ;;
+    delete)
+      minikube delete -p "$2"
+      rm -rf ~/.minikube/profiles/"$2"
+      kubectl config delete-context "$2"
+      kubectl config delete-cluster "$2"
+      kubectl config unset users."$2"
+      ;;
+    *) # switch profile
+      kubectl config use-context "$1"
+      if [ $? == 0 ]; then
+        minikube profile "$1"
+      fi
+      ;;
+  esac
+  exit $?
+fi
+exec minikube "$@"
+```
 
 Pods that are running inside Kubernetes are running on a private, isolated network. They are visible by other pods and services within the cluster, but not outside that network. When we use kubectl we are interacting through an API endpoint. A proxy forwards communications into the cluster-wide, private network.
 
@@ -109,8 +183,13 @@ These files are used to organise information about clusters, users and authentic
 
 By default `kubectl` looks for a file named `config` in the `$HOME/.kube` directory.
 
-## apply
+### apply
 
 This command manages applications through files defining Kubernetes resources. It creates and updates resources in a cluster.
 
+## Ingress
 
+Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. It can also deal with load balancing. 
+
+SSM manager systems manager
+session manager - for terminal in the browser

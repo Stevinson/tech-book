@@ -22,4 +22,17 @@ Databases for python.
 
 * `drop(['Q1'], axis=1)` - drop columns from a `DataFrame`. Note that this is not an in-place method, i.e. you need to assign it
 
-* Or to only keep specified columnsm, thebn: `data_frame[['col1', 'col2']]`
+* Or to only keep specified columns, thebn: `data_frame[['col1', 'col2']]`
+
+* `shape` property returns the dimensions of the dataframe in the format (number_of_rows, number_of_columns).
+
+* A `date` field can be split into [day, month, year] components by using `df.year == 12`, etc. The string format can be converted to a `pd.datetime` by using the `pf.to_datetime` function.
+
+* To iterate over the rows in a DataFrame:
+
+```
+for index, row in df.iterrows():
+	<code>
+```
+
+* `series.max()`: find the max in a series

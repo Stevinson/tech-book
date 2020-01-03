@@ -174,6 +174,12 @@ $ git config --global mergetool.bc3.trustExitCode true
 
 * `git rm --cached <file>` : this removes a file that was being tracked but is now in the .gitignore
 
+* For files that you want ignored across every repo on your machine, create the file and point towards it using the command:
+
+```
+git config --global core.excludesfile ~/.gitignore_global
+```
+
 ## Tags
 
 Tags can be used to version and they just point to a commit.

@@ -78,4 +78,6 @@ The `pom.xml` can be generated through Eclipse by using the m2e plugin. The step
 
 * **nginx** is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 
+* **jq** is a lightweight and flexible command-line processor for JSON.
 
+* **swig** (simplified wrapper and integration generator) is a tool that conmnects programs written in C and C++ with a variety of high-level programming languages.

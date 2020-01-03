@@ -38,6 +38,11 @@ COPY is preferred to ADD because it is more transparent. It only supports copyin
 
 ```Dockerfile
 LABEL
+```
+
+TODO
+
+```Dockerfile
 RUN
 ```
 
@@ -120,6 +125,10 @@ docker rm $(docker ps -a -q) # delete all the docker containers
 
 * `docker build -t eigentech/section_pipeline:test -f docker_deployment/Dockerfile .`
 
+	* `--build-args`: a means of providing build-time arguments.
+	* `-t`: optional tag
+	* `-f`: name of the dockerfile to use to build
+
 ### i2 Docker Commands
 
 * `docker exec --user db2inst1 -t -i db2 /bin/bash -i`
@@ -177,3 +186,21 @@ docker rm -v $id
 * `docker volume ls`
 
 * `docker inspect <volume_name>`
+
+# ARG vs ENV
+
+ENV is mainly meant to provide default values for you future environment variables.
+
+ARG values, on the other hand, are not available after the image is built. 
+
+ENV default values cannot be changed during a build, unline ARG values.
+
+# WORKDIR
+
+The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY or ADD instruction that follow in the Dockerfile.
+
+## HIEU!
+
+* `lsof -i :<port number>`
+
+* `docker system prune`

@@ -62,6 +62,9 @@ LC_ALL=C awk -v pwd="${PWD}" '
 '
 ```
 
+* `find` flags:
+	* `-L` (and the deprecated `-follow`) means that symbolic links are followed and the information printed to screen will be that of the folder which is pointed to and not the link. 
+
 ### Running Processes
 
 * `ps`
@@ -331,11 +334,15 @@ e.g. `#!/bin/sh` is an example of a shebang, which tells the parent shell which 
 
 `>` is for redirecting an output file-descriptor and `>` is for redirecting an input file-descriptor. What this means is that the output of a command can be written to a file with the command `ls -l > output.txt`.
 
+`>>` on the other hand appends to a file or creates the file if it does not exist.
+
+`&` is an indicator that the following number is a file descriptor (i.e. 1 = stdin, 2 = stderr) as opposed to a file name.
+
 ### Synchronising files
 
 `rsync`: see common usages [here](https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/).
 
-##
+## Open file dynamically
 
 Opens file that updates
 
@@ -350,3 +357,9 @@ Opens file that updates
 * `du` - Lists the memory usage of files and directories
 	* `-h` - in human readable format
 	* `-c <directory_name>` - to view the total for a directory
+
+## Subshell
+
+`(list)`, where list is a sequence of commands: the list executes in a subshell environment. Note that variable assignments and builtin commands that affect the shell's environment fo not remain in effect after the command completes.
+
+`python -m pip install pygame --index-url https://pypi.python.org/simple` to set the default url to pypi (instead of eigen)`

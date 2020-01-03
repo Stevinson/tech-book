@@ -284,5 +284,18 @@ Attackers rely on the lack of monitoring and timely response to achieve their go
 Things that need to be logged: all login, access control failures, server-side validation failures with sufficient user context to identify suspicious behaviour, all held for long enough to allow delayed forensic analysis and in a format that can be easily consumed by a centralised log management system.
 
 
+## TODO: Research
+---
 
-
+1. FoxyProxy
+2. Burp Suite
+3. wfuzz
+4. nmap -sC -sV -oA
+5. hydra
+6. {echo,text} or ${IFS} to get around not being allowed spaces
+7.stty
+8. sysmonitor
+9. rock you
+10. find -newermt to specify a time to look for
+11. base64 as compiled python files can be converted to python files using program called uncompyle
+12. linpeas

@@ -3,10 +3,13 @@
 ## Python
 
 ### GPyOpt
+---
 
 `GPyOpt` is a library for Bayesian Optimisation based on the `GPy` framework for Gaussian process modelling. See [here](https://sheffieldml.github.io/GPyOpt/).
 
+
 ### GPy
+---
 
 ### `torch`
 
@@ -17,5 +20,13 @@
 `Dropout` for dropout regularisation.
 
 
+### SKLearn
+---
 
+* `DecisionTreeClassifier`
+	* `fit()`
+	* `score()`
+
+* `GradientBoostingClassifier(num_estimators, learning_rate, max_depth)`
+	* ``
 

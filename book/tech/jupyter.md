@@ -22,6 +22,8 @@ NB. If using notebooks with conda, then make sure the jupyter package is install
 
 * `dd` : deleted the highlighted cell
 
+* `ii`: cancels the current cell from operating
+
 ## Code
 
 * Starting a line with an exclamation mark will run the line as a terminal command.

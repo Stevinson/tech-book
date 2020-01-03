@@ -1,4 +1,4 @@
-#Python Packages
+# Python Packages
 
 ## Image Manipulation
 
@@ -91,3 +91,29 @@ Creates a tuple out of lists.
 
 * `chdir(<path>)` : used to change the current working directory to the one specified.
 
+
+---
+
+
+## `click`
+
+Click is a package for creating CLIs with as little code as necessary. It works by declaring commands through decorators.
+
+### `command`
+
+```python
+@click.command()
+```
+
+This makes the proceeding function become a callable script.
+
+### `option` and `argument`
+
+```python
+@click.option('--count', default=1, help='number of greetings')
+@click.argument('name')
+def hello(count, name):
+	pass
+```
+
+These give the ability to pass arguments to the CLI command.
