@@ -105,3 +105,7 @@ case $1 in
 		;;
 esac
 ```
+
+## Special Variables
+
+* `$?` - give the exit status of the last task

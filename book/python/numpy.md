@@ -31,3 +31,23 @@ Where `size` is a tuple that defines the output shape.
 ## `numpy.testing`
 
 * `assert_equal(a, b)`
+
+## Maths
+
+* Transpose
+
+`numpy.matrix.transpose()`
+
+* Dot product
+
+`np.dot(a, b)`
+
+* Logarithm
+
+`np.log(x)`
+
+* Exponential
+
+`np.exp()`
+
+

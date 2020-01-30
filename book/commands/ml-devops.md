@@ -60,6 +60,9 @@ A good workflow guide can be found [here](https://docs.pachyderm.com/latest/how-
 
 #### Other Commands
 
+* `pachctl mount ./pfs` and `pachctl unmount ./pfs` will put the 
+
+NB. This will require having `fuse` downloaded.§
 
 ### Concepts
 
@@ -76,6 +79,16 @@ A good workflow guide can be found [here](https://docs.pachyderm.com/latest/how-
 * /pfs/images and /pfs/out are special local directories that Pachyderm creates within the container automatically.
 
 * **Contexts** are 
+
+#### Autoscaling
+
+1. Pachyderm scaling
+
+
+
+2. Cloud service provider scaling
+
+When a pipeline is created Pachyderm will ask the k8s cluster how many nodes are available.
 
 ### Creating a Project
 

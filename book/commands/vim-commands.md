@@ -46,6 +46,7 @@
   - `N` : repeat backwards search
   - `*` : search for the word currently under the cursor
   - `:%s/search_for_this/replace_with_this/c` : search and replace with confirm.
+  - `\c`: This at the beginning of the search will make it case-insensitive.
 
 * `saveas <filename>`
   Creates a new file with the given name in the current folder.

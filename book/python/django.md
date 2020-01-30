@@ -51,7 +51,7 @@ Off the back of the model file Django not only creates the database schema but a
 
 * If not using SQLite then settings such as USER, PASSWORD and HOST must be added.
 
-* There a bunch of applications that are installed as default and they make use of the database tables so `python manage.py migrate` needs to be run before running the server. This looks in the `INSTALLED_APPS` that are defined in `settings.py` and creates any necessary tables. 
+* There are a bunch of applications that are installed as default and they make use of the database tables so `python manage.py migrate` needs to be run before running the server. This looks in the `INSTALLED_APPS` that are defined in `settings.py` and creates any necessary tables. 
 
 * `python manage.py makemigrations polls` creates a migration out of the changes that have been made to the models.
 
@@ -98,5 +98,98 @@ Off the back of the model file Django not only creates the database schema but a
 
 * `python manage.py `
 
+## Specifics
+
+### Signals
+
+Django has a *signal dispatcher* which allows decoupled applications to get notified when actions occur elsewhere in the framework. *Senders* are allowed to notify *receivers* that some action has taken place, i.e. when different parts of the code base are interested in the same events.
+
+Documentation can be found [here](https://docs.djangoproject.com/en/3.0/topics/signals/)
+
+### Forms
+
+Django uses forms to allow input from users. 
+
+To simplify the complex process of handling forms (different data types/ HTML rendering/ validation/ cleaning) Django has a `Form` class that defines a form and determines how it works and appears.
+
+The documentation can be found [here](https://docs.djangoproject.com/en/3.0/topics/forms/).
+
+### Admin
+
+Django has an automatic admin interface which reads metadata from your models to provide an interface where specified users can manage content on the site.
+
+### URLs
+
+Urls are specified in the `urls.py` file in an application.
+
+These use the keyword `urlpatterns` to specify the urls.
+
+Urls use the `path` class:
+
+```
+path(<route>, <view>, <kwargs>, <name>>)
+```
+
+`include()`: takes a fill python import path that should be included in this place.
+
+### Managers
+
+A Manager is the interface through which database query operations are provided to Django models. At least one Manager exists for every model in a Django application.
+
+By default, Django adds a Manager with the name objects to every Django model class.
 
 
+### WSGI and ASGI
+
+*Web server gateway interface* is a specification nthat describes how a web server communicates with web applications and how web applications can be chained together to proceess one request.
+
+*Asynchronous server gateway interface* provides a standard interface between async-capable python web servers.
+
+
+---
+
+## RESTful API
+
+### Requests and Responses
+
+`rest-framework` introduces the `Request` and `Response` classes, which are extensions of the `HTTPRequest` and `HTTPresponse` classes. 
+
+`@api_view` decorator and the `APIView` class for working with class based views provide extra functionality such as requiring a `Request` and adding context to the  `Response`.
+
+`format_suffix_patterns` allows for the use of different format types.
+
+`permission_classes` variable in a view class will set the permissions classes for that view.
+
+When a view is returning JSON you have a `serializer_class` variable in the view, whilst if you are rendering HTML you have a `renderer_class` variable set.:wqcurl -v -s
+
+---
+
+## ViewSet
+
+`ViewSet`s leave the construction of URLs to Django.
+
+A `ModelViewSet` will automatically create the list, create, destroy, get and update commands.
+
+Notice that we've also used the @action decorator to create a custom action, named highlight. This decorator can be used to add any custom endpoints that don't fit into the standard create/update/delete style. The URLs for custom actions by default depend on the method name itself. If you want to change the way url should be constructed, you can include url_path as a decorator keyword argument.
+
+---
+
+## Serialisers
+
+### Serialiser Relations
+
+---
+
+## Logging
+
+### Handlers
+
+The engine that determines what happens to each message in a logger. 
+
+### Filters
+
+Provides control over which log records are passed from logger to handler.
+
+### Formatters
+
+Determiens the form of the text that is rendered.

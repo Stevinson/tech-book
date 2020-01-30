@@ -180,3 +180,13 @@ To get code coverage use the following: `--cov=section_pipeline --cov-report ter
 #### Sorted dicts
 
 * `sorted(dict.iteritems(), key = lambda x: x[1])` : 
+
+---
+
+## Python Infrastructure
+
+---
+
+A *Python egg* is a logical structure embodying the release of a specific version of a python project, comprising its code, resources, and metadata. There are two main basic formats:
+
+1. `.egg` directory containing the code and resources with a `.egg-info` directory adjacent containing the metadata.

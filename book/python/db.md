@@ -36,3 +36,35 @@ for index, row in df.iterrows():
 ```
 
 * `series.max()`: find the max in a series
+
+
+---
+
+
+## PostgereSQL
+
+```
+psql
+CREATE DATABASE myproject;
+CREATE USER myprojectuser WITH PASSWORD 'password';
+ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myprojectuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+```
+
+* `\q` : exit the postgres shell
+
+* `\l` : list all databases
+
+* `\dt` : list tables in current database
+
+* `\d <table name>` : describe a table
+
+* `\c` : switch connection to another database
+
+```
+docker pull postgres
+mkdir ~/.docker/volumes/postgres
+docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v ~/.docker/volumes/postgres:/var/lib/postgresql/data  postgres
+```

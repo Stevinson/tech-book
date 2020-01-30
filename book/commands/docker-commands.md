@@ -99,6 +99,7 @@ Build the docker image with Kubernetes.
     This tells Docker that it should talk to the Minikube Docker daemon instead of the local daemon.
   - docker images
   - make -f <makefile_name>
+  - `--entrypoint=/bin/bash <image_id>`: this means you can inspect the image
 
 ### Remove docker container and images
 
@@ -199,8 +200,22 @@ ENV default values cannot be changed during a build, unline ARG values.
 
 The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY or ADD instruction that follow in the Dockerfile.
 
+## Move docker images
+
+To copy a docker image from machine to another.
+
+```
+docker save -o <path for generated tar file> <repository:tag>
+scp -i <key> <path> ubuntu@x.x.x.x:/home/ubuntu`
+docker load -i <path to image tar file>
+```
+
 ## HIEU!
 
 * `lsof -i :<port number>`
 
 * `docker system prune`
+
+`addsuer`
+	* `--disables-password`: sets the password to `!`
+	* `gecos`:  

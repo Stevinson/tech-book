@@ -187,9 +187,34 @@ By default `kubectl` looks for a file named `config` in the `$HOME/.kube` direct
 
 This command manages applications through files defining Kubernetes resources. It creates and updates resources in a cluster.
 
+### Commands
+
+```
+
+```
+
 ## Ingress
 
 Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. It can also deal with load balancing. 
 
 SSM manager systems manager
 session manager - for terminal in the browser
+
+## Users
+
+To change user permissions for minikube
+
+* `sudo mv /home/ubuntu/.kube /home/ubuntu/.minikube $HOME`
+* `sudo chown -R $USER $HOME/.kube $HOME/.minikube`
+
+## ConfigMap
+
+ConfigMaps are used to store information to be used in deployment of a container.
+
+```
+kubectl create -f <name>-config,ap.yaml
+```
+
+## YAML File Options
+
+* `apiVersion`: an object definiotion in K8 requires an `apiVersion` field. A cheatsheet for which should be used can be found [here](https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html).

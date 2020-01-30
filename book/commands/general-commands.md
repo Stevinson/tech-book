@@ -326,6 +326,8 @@ Traverses to the above direcory in Finder.
 
 * On a windows the command to move a file is not `mv` but `move`
 
+* `ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'` : to get your ip address
+
 ### shebang
 
 e.g. `#!/bin/sh` is an example of a shebang, which tells the parent shell which interpreter should be used to execute the script.
@@ -363,3 +365,5 @@ Opens file that updates
 `(list)`, where list is a sequence of commands: the list executes in a subshell environment. Note that variable assignments and builtin commands that affect the shell's environment fo not remain in effect after the command completes.
 
 `python -m pip install pygame --index-url https://pypi.python.org/simple` to set the default url to pypi (instead of eigen)`
+
+

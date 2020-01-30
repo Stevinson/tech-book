@@ -38,7 +38,19 @@ The numpy library is typically not enough for deep learning.
 
 A kernel of just two values, one negative and one positive, will reveal edges, as edges tend to have dissimilar adjacent pixel values.
 
+### Code
 
+* Convolution can be calculated in Python as the dot product of flattened matrices, e.g.:
+
+```python
+patch = np.array([[1, 1], 
+                  [0, 1]])
+
+kernel = np.array([[1, 2], 
+                   [3, 4]])
+
+convolution = patch.flatten().dot(kernel.flatten())
+```
 
 ---
 
