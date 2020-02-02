@@ -47,7 +47,7 @@
 	* [Servlets](java/servlets.md)
 	* [Streams](java/streams.md)
 	* [JUnit](java/junit.md)
-	* [Collections]
+	* Collections
 		* [Lists](java/lists.md)
 		* [Sets](java/sets.md)
 		* [Maps](java/maps.md)
@@ -64,6 +64,22 @@
 	* [Tensorflow](ml/tensorflow.md)
 	* [Unity](ml/unity.md)
 	* [Unsupervised](ml/unsupervised.md)
+	* Coursera
+		* Bayesian
+			* [Intro](ml/coursera/week-1-intro.md)
+			* [Sampling](ml/coursera/week-4-sampling.md)
+		* Deep Learning
+			* [Intro](ml/coursera/week-1-intro.md)
+			* [Neural Networks](ml/coursera/week-2-nns.md)
+			* [CNNs](ml/coursera/week-3-cnns.md)
+			* [Autoencoders](ml/coursera/week-4-cnns.md)
+* Papers
+	* Journal Club
+		* [CRFs](papers/journal-club/crfs.md)
+		* [Snorkel](papers/journal-club/snorkel.md)
+		* [Transformer](papers/journal-club/transformer.md)
+	* Other
+		* [Badger Architecture](papers/other/badger.md)
 * Python
 	* [Basics](python/python.md)
 	* [Concepts](python/concepts.md)
