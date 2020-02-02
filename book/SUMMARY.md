@@ -66,13 +66,13 @@
 	* [Unsupervised](ml/unsupervised.md)
 	* Coursera
 		* Bayesian
-			* [Intro](ml/coursera/week-1-intro.md)
-			* [Sampling](ml/coursera/week-4-sampling.md)
+			* [Intro](ml/coursera/bayesian/week-1-intro.md)
+			* [Sampling](ml/coursera/bayesian/week-4-sampling.md)
 		* Deep Learning
-			* [Intro](ml/coursera/week-1-intro.md)
-			* [Neural Networks](ml/coursera/week-2-nns.md)
-			* [CNNs](ml/coursera/week-3-cnns.md)
-			* [Autoencoders](ml/coursera/week-4-cnns.md)
+			* [Intro](ml/coursera/deep-learning/week-1-intro.md)
+			* [Neural Networks](ml/coursera/deep-learning/week-2-nns.md)
+			* [CNNs](ml/coursera/deep-learning/week-3-cnns.md)
+			* [Autoencoders](ml/coursera/deep-learning/week-4-cnns.md)
 * Papers
 	* Journal Club
 		* [CRFs](papers/journal-club/crfs.md)
