@@ -8,13 +8,13 @@
 
 **Jupyter Notebook** is used to write up. Download [here](https://jupyter.readthedocs.io/en/latest/install.html#new-to-python-and-jupyter).
 
-## General
+### General
 
 * C++ and C backend meaning that it runs quicker than just python.
 
 * Python and C++ API.
 
-## Dataflow Graph
+### Dataflow Graph
 
 TensorFlow defines computations as graphs and these are made with operations, forming a dataflow graph. This has 2 units: **node** (mathematical operation) and **edge** (multidimensional array or tensor).
 
@@ -31,9 +31,9 @@ This is so efficient because instead of returning to Python all the time, it cre
 
 ---
 
-## Syntax
+### Syntax
 
-### Imports
+#### Imports
 
 ```python
 #Importing
@@ -46,7 +46,7 @@ import tensorflow as tf
 import matplotlib.patches as mpatches
 ```
 
-### Setup
+#### Setup
 
 ```python
 session = tf.Session()
@@ -54,7 +54,7 @@ result = session.run(computationVariable)
 session.close()
 ```
 
-### `with` block
+#### `with` block
 
 Using a `with` block stops the need to close sessions every time.
 
@@ -63,7 +63,9 @@ with tf.Session() as session:
   result = session.run(computationVariable)
 ```
 
-### Variables and placeholders
+#### Variables and placeholders
+
+In short a variable is a trainable value such as a parameter whilst a placeholder is an input value, such as the training data or truth outputs.
 
 ```python
 state = tf.variable()
@@ -73,21 +75,23 @@ a = tf.placeholder(datatype)  # Create a placeholder than data will be placed in
 session.run(computationVariable, feed_dict={a:1})
 ```
 
-### Function
+The `tf.get_variable()` method is higher level that a tf.Variable object and gets an existing variable with these parameters or creates a new one. It also facilitates the sharing of variables, for example if you want to use a multi-GPU setting.
+
+#### Function
 
 ```python
 def methodName(x): return x
 methodName.eval(session=sess)
 ```
 
-### Adding noise
+#### Adding noise
 
 ```python
 y_data = x_data * 3 + 2
 y_data = np.vectorize(lambda y: y + np.random.normal(loc=0.0, scale=0.1))(y_data)
 ```
 
-## Equations
+### Equations
 
 ```python
 tf.reduce_mean
@@ -104,14 +108,14 @@ tf.random_normal(
 )
 ```
 
-### ML
+#### ML
 
 ```python
 np.convolve(A,B) # Convolves two arrays
 ```
 
 
-### Images
+#### Images
 
 * To convert an image to a matrix of values between 0 and 255: `np.asarray(image)`
 
@@ -123,15 +127,17 @@ imgplot.set_cmap('gray')
 plt.show(imgplot)
 ```
 
-### To be placed
+#### To be placed
 
 * `DataSet` : look this up
+
 
 * `tf.reshape(<input>, <new_shape>)`
 
 * `tf.shape(<tensor>)` - returns the shape of a tensor
 
-## Tensorflow Models
+
+### Tensorflow Models
 
 When you train a model with tensorflow, various checkpoint files are created to save them:
 
@@ -141,9 +147,11 @@ When you train a model with tensorflow, various checkpoint files are created to 
 	* `data` file that holds all the variables as a `TensorBundle`
 	* `checkpoint` that keeps a record of the latest checkpoint files saved
 
-## Classes
 
-### `InteractiveSession`
+### Classes
+
+#### `InteractiveSession`
+
 
 ```
 run(
@@ -158,11 +166,53 @@ This method runs one "step" of TensorFlow computation, by running the necessary 
 
 The value returned by run() has the same shape as the fetches argument, where the leaves are replaced by the corresponding values returned by TensorFlow.
 
+
 ### Other
 
 ```
 ConfigProto - protocol message
 ```
+=======
+### Numpy Operations
+
+There is a Tensorflow equivalent to all Numpy operations:
+
+* `np.mean` -> `tf.reduce_mean`
+
+*
+ 
+### Probabilities
+
+* `tf.nn.softmax()`
+
+* `tf.argmax()` - find the maximum value in a logit to use as the prediction
+
+* `tf.nn.softmax_cross_entropy_with_logits` - calculate cross entrpoy
+
+### Summaries to view data
+
+* `tf.summary.scalar()`
+
+* `tf.summary.FileWriter()`
+
+* `tf.summary.merge_all()`
+
+* `writer.add_summary()`
+
+* `writer.flush()`
+
+### Optimisers
+
+There are several pre-packaged optimisers available:
+
+1. `tf.train.GradientDescentOptimizer()`
+
+2. `tf.train.MomentumOptimizer()`
+
+3. `tf.train.AdamOptimizer()`
+
+---
+
 
 ## Keras
 
@@ -201,10 +251,20 @@ The other main type of model in Keras apart from `Sequential` is called `Model`.
 One must:
 
 * Define the input layer that specifies the shape of input data.
+=======
+There are two main models in Keras, *Sequential* which is simpler and a functional Api called *Model* which allows for more complex networks with multiple inputs and outputs.
+ 
+#### `Sequential`
+
+A linear stack of layers. Note that before we configure the learning process, which is done via the `compile()` method, we need to provide an optimiser, a loss function and a list of metrics.
+
+
+#### `Model`
 
 * `Model`: adds training and evaluation routines to a `Network`.
 
 	* `compile()` configures the model for training.
+
 
 e.g. A multilayer perceptron using this functional API:
 
@@ -241,3 +301,9 @@ from keras import backend as K
 K.clear_session()
 K.set_session(<tf session>)
 ```
+=======
+### Helpers
+
+* `keras.utils.to_categorical(truth_val, dimensions)` - This will turn a value into a one-hot vector representing that value, e.g. 3 will become [0 0 0 1 0 0 ...]
+
+
