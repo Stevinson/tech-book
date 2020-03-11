@@ -117,3 +117,7 @@ def hello(count, name):
 ```
 
 These give the ability to pass arguments to the CLI command.
+
+## capsys
+
+Enable capturing of writes to ``sys.stdout`` and ``sys.stderr`` and make captured output available via ``capsys.readouterr()`` method calls.

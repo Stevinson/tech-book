@@ -57,6 +57,7 @@
 	* [Definitions](ml/definitions.md)
 	* [Gaussian Processes](ml/gaussian-processes.md)
 	* [Jupyter](ml/jupyter.md)
+	* [Maths](ml/maths.md)
 	* [Natural Language Processing](ml/nlp.md)
 	* [Neural Networks](ml/nns.md)
 	* [Numpy](ml/numpy.md)
@@ -85,6 +86,7 @@
 	* [Concepts](python/concepts.md)
 	* [Concurrency](python.concurrency.md)
 	* [Conda](python/conda.md)]
+	* [Databases](python/db.md)
 	* [Django](python/django.md)
 	* [Numpy](ml/numpy.md)
 	* [Packages](python/packages.md)]

@@ -35,4 +35,8 @@ Segementing sentences.
 
 Many NLP libraries encode all strings to hash values to reduce memory usage and improve efficiency.
 
+---
 
+## Eigen Terminology
+
+* **Selector** - a function that defines spans.

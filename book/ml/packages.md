@@ -30,3 +30,13 @@
 * `GradientBoostingClassifier(num_estimators, learning_rate, max_depth)`
 	* ``
 
+* `CountVectorizer` : 
+	* `fit_transform(raw_documents)` - learn the vocabulary dictionary and return term-document matrix. This can then be turned into a sparse matrix with `.toarray()`
+	* `get_feature_names()` - 
+	* `fit()` - learn a vocabulary dictionary of all tokens in the raw documents?
+
+TODO Look Up:
+
+1. `AutoSklearnPredict`
+2. `sklearn.preprocessing.label.fit_transform`
+3. 

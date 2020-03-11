@@ -10,9 +10,9 @@
 
 * To compare two arrays in a boolean manner put the condition in round brackets and then 
 
-## 
+* `np.arange()` - create an array which contains evenly spaced values within the provided values.
 
-* `np.clip(array, min, max)` - values in an array that fall outside the provided range and clipped to the provided limits.
+---
 
 ## Distributions
 
@@ -28,9 +28,16 @@ np.random.normal(
 
 Where `size` is a tuple that defines the output shape.
 
+---
+
+
 ## `numpy.testing`
 
 * `assert_equal(a, b)`
+
+
+---
+
 
 ## Maths
 
@@ -50,4 +57,11 @@ Where `size` is a tuple that defines the output shape.
 
 `np.exp()`
 
+---
 
+
+## Other
+
+* `np.clip(array, min, max)` - given a range this will clip the values that lie out of the provided values to the edge values.
+
+* `np.arange()` - create an array which contains 

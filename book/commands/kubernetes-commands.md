@@ -28,6 +28,12 @@ minikube config use-context <contex-name>
 kubectl config get-contexts
 ```
 
+To look at the aws-auth ConfigMap: `kubectl -n kube-system get configmap aws-auth -o yaml`
+
+To list all namespaces: `kubectl get namespace`
+
+
+
 # Minikube
 
 ## Profiles

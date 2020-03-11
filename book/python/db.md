@@ -35,7 +35,27 @@ for index, row in df.iterrows():
 	<code>
 ```
 
+#### Series
+
+* One-dimensional ndarray with axis labels (including time series). Labels need not be unique but must be a hashable type. The object supports both integer- and label-based indexing and provides a host of methods for performing operations involving the index. Statistical methods from ndarray have been overridden to automatically exclude  missing data (currently represented as NaN). Operations between Series `(+, -, /, *, **)` align values based on their associated index values-- they need not be the same length. The result index will be the sorted union of the two indexes. 
+
 * `series.max()`: find the max in a series
+
+
+#### Other
+
+* `CategoricalDType` - Type for categorical data with the categories and orderedness. 
+
+```
+pandas.CategoricalDtype(categories=None, ordered: Optional[bool] = False)
+```
+
+This can then be used on a dataframe to label each element as a member of one of the catagories with:
+
+```
+t = pd.CategoricalDtype(categories=['b', 'a'], ordered=True)
+pd.Series(['a', 'b', 'a', 'c'], dtype=t)
+```
 
 
 ---
