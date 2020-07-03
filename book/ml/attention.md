@@ -1,0 +1,7 @@
+# Attention 
+
+The first attention layer in the decoder is the ‘Masked Multi-Head Attention’ layer and is self-attention layer, calculating how much each word is related to each word in the same sentence. However, our aim in the decoder is to generate the next French word and so for any given output French word we can use all the English words but only the French words previously seen in the sentence. We therefore ‘mask’ the words that appear later in the French sentence by transforming these to 0 so the attention network cannot use them.
+
+The second attention block in the decoder is where the English to French word mapping happens. We have a query for every output position in the French sentence and a key/value for every English input word. We calculate relevance scores from the dot product of the query and key and then obtain output scores for each predicted word from multiplying the relevance and value. The following diagram is useful to visualise how, for each predicted word, we can have relevance scores that can predict that one English word can be translated to multiple, or no French word.
+
+In summary, the encoder discovers interesting things about the English sentence whilst the decoder predicts the next French word in the translation. It should be noted they use ‘Multi-Head Attention’, meaning that a number (8 in the original paper) of attention vectors are calculated to learn attention mechanisms to pay attention to different things, for example grammar, vocabulary, tense, gender, and the output is a weighted average of these.

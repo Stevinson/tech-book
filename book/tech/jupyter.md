@@ -36,7 +36,12 @@ NB. If using notebooks with conda, then make sure the jupyter package is install
 
 * `%%time` - will return the length of time that the cell took to complete
 
-* `` - 
+* To automatically reload modules:
+
+```python
+%load_ext autoreload
+%autoreload 2
+```
 
 ## Visualisations
 
