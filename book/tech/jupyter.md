@@ -43,6 +43,8 @@ NB. If using notebooks with conda, then make sure the jupyter package is install
 %autoreload 2
 ```
 
+* `pd.set_option('display.max_colwidth', -1)` - To show all the text within a cell of a dataframe
+
 ## Visualisations
 
 You can make cool anime visualisations with the following (which shows gradient descent):

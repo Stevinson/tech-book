@@ -5,7 +5,7 @@
 	* [Bluemix](commands/bluemix-commands.md)
 	* [Databases](commands/db.md)
 	* [Docker](commands/docker-commands.md)
-	* [Eclipse](commands/eclipse-commands.md)
+	* [IDEs](commands/eclipse-commands.md)
 	* [General](commands/general-commands.md)
 	* [Github](commands/github-commands.md)
 	* [Helm](commands/helm-commands.md)

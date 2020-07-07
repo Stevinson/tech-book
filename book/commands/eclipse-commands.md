@@ -1,6 +1,12 @@
-# Eclipse
+# IDEs
 
-## Mac Commands
+## Pycharm
+
+* To hook up to AWS instance read [this](https://minhoryang.github.io/en/posts/connect-aws-ec2-instance-with-pycharm-professional/) tutorial.
+
+## Eclipse
+
+### Mac Commands
 
 * `cmmd` + `shift` + `/`
 
