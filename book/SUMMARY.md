@@ -89,6 +89,7 @@
 	* [Django](python/django.md)
 	* [Numpy](ml/numpy.md)
 	* [Packages](python/packages.md)]
+	* [Random](python/random.md)]
 	* [Science Packages](python/sci-packs.md)
 	* [Visualisations](python/visualisations.md)
 * Tech

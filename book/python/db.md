@@ -35,6 +35,12 @@ for index, row in df.iterrows():
 	<code>
 ```
 
+* `DataFrame.sparse.from_spmatrix()` - create a new DataFrame from a scipy sparse matrix.
+
+* `s.map({'cat': 'kitten', 'dog': 'puppy'})` converts all of ceertain values to other values.
+
+* `df.replace({"col1": dict})` converts all of ceertain values to other values in the column col1 with the values in the dict dict.
+
 #### Series
 
 * One-dimensional ndarray with axis labels (including time series). Labels need not be unique but must be a hashable type. The object supports both integer- and label-based indexing and provides a host of methods for performing operations involving the index. Statistical methods from ndarray have been overridden to automatically exclude  missing data (currently represented as NaN). Operations between Series `(+, -, /, *, **)` align values based on their associated index values-- they need not be the same length. The result index will be the sorted union of the two indexes. 
