@@ -145,10 +145,6 @@ NodeJs
 
 
 
-SQL
-
-
-
 Notes
 
 tty is a Unix commadn that displays to standard output the name of the terminal connected to standard input. These are commonly used as a way to get access to the computer to fix things without having to log into.

@@ -1,4 +1,10 @@
-# POSTGRES
+# SQL
+
+## General SQL
+
+* `COALESCE`: Return the first non-null value in a list
+
+## POSTGRES
 
 `\l`: list all databases
 

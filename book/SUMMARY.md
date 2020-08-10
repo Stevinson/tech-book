@@ -26,6 +26,7 @@
 	* [Ports](compsci/ports.md)
 	* [Principles](compsci/principles.md)
 	* [Security](compsci/security.md)
+	* [SQL](compsci/sql.md)
 	* [Solr](compsci/solr.md)
 	* [Tech](compsci/tech.md)
 	* [Threads](compsci/threads.md)

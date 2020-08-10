@@ -121,3 +121,12 @@ These give the ability to pass arguments to the CLI command.
 ## capsys
 
 Enable capturing of writes to ``sys.stdout`` and ``sys.stderr`` and make captured output available via ``capsys.readouterr()`` method calls.
+
+
+## `collections`
+
+### `defaultdict`
+
+A dictionary that will not throw a `KeyError` if you try and get an iten with a key that is not in the dict. Insterad, it will create any items that you try and access. To do this it calls the function object that you pass to the constructor of the dict.
+
+
