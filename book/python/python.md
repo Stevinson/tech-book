@@ -190,3 +190,19 @@ To get code coverage use the following: `--cov=section_pipeline --cov-report ter
 A *Python egg* is a logical structure embodying the release of a specific version of a python project, comprising its code, resources, and metadata. There are two main basic formats:
 
 1. `.egg` directory containing the code and resources with a `.egg-info` directory adjacent containing the metadata.
+
+
+## `SimpleNamespace`
+
+The `Simplenamespace` class allows you to:
+
+1. initialise attributes when constructing the class
+2. Overrides default comparison and instead compares attributes (instead of `id()`)
+
+e.g.
+
+```python
+class Class():
+	def __init__(self, *_, force: bool = False, **kwargs):
+	    self._args = SimpleNamespace(force=force, **kwargs)
+```

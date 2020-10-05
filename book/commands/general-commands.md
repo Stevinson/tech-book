@@ -236,7 +236,7 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
 
 	* `-o` argument ("--only-matching") prints only the matching part of the lines
 
-* `which <file_name>``
+* `which <file_name>`
   This locates a file on the path.
 
 * `<command> $PATH`
@@ -278,6 +278,8 @@ components publish "External/IBM JDK 8 Darwin Binary Distribution:8.0.5.5" /copy
   Port 22
   IdentityFile
   ```
+
+* `ssh-keygen -y -f ./upside.pem` to get the public key to a private key
 
 ## Other
 
@@ -328,6 +330,8 @@ Traverses to the above direcory in Finder.
 
 * `ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'` : to get your ip address
 
+* `set -o allexport && source ../.env && set +o allexport` - set env variables without the `export` keyword and then disable this feature
+
 ### shebang
 
 e.g. `#!/bin/sh` is an example of a shebang, which tells the parent shell which interpreter should be used to execute the script.
@@ -348,7 +352,7 @@ e.g. `#!/bin/sh` is an example of a shebang, which tells the parent shell which 
 
 Opens file that updates
 
-`less +F <file_oath_to_log>
+`less +F <file_oath_to_log>`
 
 ## Disk Space
 
@@ -364,6 +368,6 @@ Opens file that updates
 
 `(list)`, where list is a sequence of commands: the list executes in a subshell environment. Note that variable assignments and builtin commands that affect the shell's environment fo not remain in effect after the command completes.
 
-`python -m pip install pygame --index-url https://pypi.python.org/simple` to set the default url to pypi (instead of eigen)`
+`python -m pip install pygame --index-url https://pypi.python.org/simple` to set the default url to pypi (instead of eigen)
 
 

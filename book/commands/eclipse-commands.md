@@ -85,3 +85,5 @@ Changes to the Java perspective.
 * `cmmd` + `+`/ `-`: open or close a block of code
 
 * `alt` + `shift` + `C`: view all recent changes
+
+* `alt` + `click`: select multiple cursor locations

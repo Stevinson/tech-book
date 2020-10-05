@@ -53,6 +53,10 @@ plt.xlabel('')
 plt.show()
 ```
 
+
+### math
+
+* `math.isnan()`
 ---
 
 
@@ -83,9 +87,17 @@ Creates a tuple out of lists.
 
 ### `abc` - Abstract Base Classes
 
+
 ### `itertools`
 
-* `chain()` : make an iterator that retirns elements from the first iterable until it is exhausted, then proceeds to the next iterable - so that consecutive sequences are treated as a single sequence. e.g. `chain('ABC, 'DEF)` -> A B C D E F
+* `chain()` : make an iterator that returns elements from the first iterable until it is exhausted, then proceeds to the next iterable - so that consecutive sequences are treated as a single sequence. e.g. `chain('ABC, 'DEF)` -> A B C D E F
+
+* `repeat()`: Make an iterator that returns object over and over again. 
+
+* `itertools.zip_longest(a, b, fillvalue="")`
+
+* `islice()` allows one to iterate over a specified number of the iterable with `islice(iterable, 0, n)`
+
 
 ### `os`
 
