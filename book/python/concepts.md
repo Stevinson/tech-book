@@ -26,3 +26,29 @@ Reusable code that is used to inject a test.
 ### Mocks
 
 
+### Dunder Methods
+
+1. `__set_name__(self, owner, name)`
+
+This can be used to access the variable name programatically.
+
+2. `__get__(se;f, isntance, owner)`
+
+This can be used to tell a manager class what other **instance** it is responsible for.
+
+3. `__repr__(self)`
+
+Returns the object representation.
+
+4. `__class__()`
+
+Descriptor object.
+
+5. `__name__(self)`
+
+6. `__mro__()`
+
+method resolution order. A tuple of the class and all it's base classes, in order of inheritence.
+
+7. `__get_attribute__(self, name)`
+

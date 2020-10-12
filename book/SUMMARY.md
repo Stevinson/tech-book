@@ -56,6 +56,7 @@
 * Machine Learning
 	* [Algorithms](ml/ml.md)
 	* [Computer Vision](ml/computer_vision.md)
+	* [Dagster](ml/dagster.md) 
 	* [Definitions](ml/definitions.md)
 	* [Gaussian Processes](ml/gaussian-processes.md)
 	* [Maths](ml/maths.md)

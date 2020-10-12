@@ -193,3 +193,10 @@ Provides control over which log records are passed from logger to handler.
 ### Formatters
 
 Determiens the form of the text that is rendered.
+
+
+---
+
+## Extra
+
+To find out where the `hb_pgs.conf` file is use `ps aux | grep postgres` or `locate pg_hba.conf`

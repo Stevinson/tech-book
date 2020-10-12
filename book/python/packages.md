@@ -141,4 +141,8 @@ Enable capturing of writes to ``sys.stdout`` and ``sys.stderr`` and make capture
 
 A dictionary that will not throw a `KeyError` if you try and get an iten with a key that is not in the dict. Insterad, it will create any items that you try and access. To do this it calls the function object that you pass to the constructor of the dict.
 
+## `inspect`
+
+Provides emthods to get information avbout live objects such as modules, classes, methods, frame objects, etc.
+
 
