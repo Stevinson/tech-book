@@ -52,7 +52,7 @@
   Creates a new file with the given name in the current folder.
 
 * `gg`
-  This will move the cursor to the beginning of the file. Note that it will not appear on the screen, which took me a little by surprise.
+  This will move the cursor to the beginning/top of the file. Note that it will not appear on the screen, which took me a little by surprise.
 
 * `dG`
   This will delete the whole file.

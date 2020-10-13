@@ -30,7 +30,7 @@ Reusable code that is used to inject a test.
 
 1. `__set_name__(self, owner, name)`
 
-This can be used to access the variable name programatically.
+This can be used to access the variable name programatically. i.e. let descriptor class know the name of the property it is being used for.
 
 2. `__get__(se;f, isntance, owner)`
 
@@ -51,4 +51,8 @@ Descriptor object.
 method resolution order. A tuple of the class and all it's base classes, in order of inheritence.
 
 7. `__get_attribute__(self, name)`
+
+8. `__init__subclass__()`
+
+This method is called whenever the containing class is subclassed. `cls` is then the new subclass. i.e. let the parent know when it is being subclassed.
 
