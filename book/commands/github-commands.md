@@ -267,3 +267,14 @@ git reset --soft HEAD@{1}
 # previous command. It's now pointing at the erroneously amended commit.)
 git commit -C HEAD@{1}
 ```
+
+
+## Ignoring future changes to a file
+
+First change the file you do not want to be tracked and use the following command:
+
+`git update-index --assume-unchanged FILE_NAME`
+
+And if you want to track the changes again use this command:
+
+`git update-index --no-assume-unchanged FILE_NAME`

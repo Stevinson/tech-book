@@ -4,6 +4,8 @@
 
 * `COALESCE`: Return the first non-null value in a list
 
+* `LAG`: 
+
 ## POSTGRES
 
 `\l`: list all databases

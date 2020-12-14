@@ -214,6 +214,13 @@ poetry cache:clear --all pypi
 poetry cache:clear --all nexus
 ```
 
+Do not create env:
+
+```
+poetry config settings.virtualenvs.create false
+poetry config virtualenvs.create false --local  # Later versions
+```
+
 ## Pip
 
 ```

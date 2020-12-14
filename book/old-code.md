@@ -71,3 +71,8 @@ module.exports = {
     updatePointDuration
 }
 ```
+
+
+github answer
+https://stackoverflow.com/questions/52210425/validate-datetime-value-using-python-jsonschema#comment114776133_52210647
+validate(order, schema, format_checker=jsonschema.FormatChecker()) as well as the package

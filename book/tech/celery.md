@@ -156,3 +156,70 @@ celery.app.builtins.add_backend_cleanup_task, periodic-rhythm
 * `LOGGING_SETUP` to `DEBUG`
 
 
+---
+
+## Celery Multi
+
+Use celery multi to start and stop several workers on the same call
+  
+
+Celery-multi parameters:
+
+* `-Ofair`
+
+* `--prefetch-multiplier=1`
+
+The combination of Ofair and prefetch=1 yields a worker's child to hold
+up to 1 task in transit (plus the one being executed). We do this to prevent
+a child that is currently executing a slow task from "locking" a next-task that
+could be executed by other child that is free.
+This is relevant for workers running long tasks.
+For short tasks,  this reduces the maximum rate of tasks/second that can be
+achieved, however we are not under that scenario for now.
+
+* `--max-memory-per-child`:
+
+Restart a worker's child after it has exceeded this amount of memory usage
+        This is a safety measure against memory leaks.
+        Note that the a child process is restarted graceful: Only after is has
+        finished executing a task.
+        This means that this is not a guarantee that the RAM consumption will not
+        exceed this value, as a task being executed, exceeding the memory,
+        will not be interrupted.
+
+* `--max-tasks-per-child`:
+
+Restart a worker's child after it has executed this number of tasks. This is a
+        safety measurement against memory leaks.
+
+* `--autoscale` / `--concurrency` :
+
+Workers create and remove children processes according to the size of queues.
+        We added a celery auto-scaler (eigenapp.autoscale.EigenAutoscaler) that will
+        prevent scaling UP when memory is low or load is high.
+
+* `--max-tasks-per-child`
+
+Our experience shows that a memory leak problem might be stronger for ML tasks.
+      However, this requires more investigations.
+      The reason why we do not set this to 1 is because we need to take advantage
+      of already-loaded modules and objects that otherwise will need to get reloaded
+      on every tasks execution, thus reducing speed of task completion.
+
+      The longer this value is, the faster the overall-tasks complete, however,
+      we need to test and investigate how memory leaks may limit this.
+      This is particularly important for ml stats as they load
+      SPACY model which gets cached in memory and which is slow to load
+
+      This parameter needs to be investigated and changed with max-memory-per-child
+      too
+
+* `--beat`:
+
+This starts the celery beat service to be run by this worker
+      Celery beat is in charge of executing cron-like-defined tasks defined by
+      common.eigenapp.celery.app.setup_periodic_tasks function
+
+      NOTE: It is important that --beat is only run within a single worker, otherwise
+      scheduled tasks will get replicated.
+
