@@ -18,4 +18,8 @@ TAG=$(shell grep 'version = "*"' pyproject.toml | egrep -o '[0-9]+.[0-9]+.[0-9]+
 
 ## Automatic Variables
 
-* `$@` - 
+* `$@` -
+
+## Other
+
+`@` before a command means do not echo this command to the output.
