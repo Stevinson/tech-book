@@ -59,14 +59,16 @@
 	* [Dagster](ml/dagster.md) 
 	* [Definitions](ml/definitions.md)
 	* [Gaussian Processes](ml/gaussian-processes.md)
+	* [Keras](ml/keras.md)
 	* [Maths](ml/maths.md)
 	* [Natural Language Processing](ml/nlp.md)
 	* [Neural Networks](ml/nns.md)
 	* [Numpy](ml/numpy.md)
-	* [Productionise](productionise.md)
+	* [Productionise](ml/productionise.md)
 	* [Regression](ml/regression.md)
 	* [TheSequence](ml/sequence.md)
 	* [Tensorflow](ml/tensorflow.md)
+	* [Time Series](ml/time-series.md)
 	* [Unity](ml/unity.md)
 	* [Unsupervised](ml/unsupervised.md)
 	* Coursera
@@ -92,8 +94,10 @@
 	* [Conda](python/conda.md)]
 	* [Databases](python/db.md)
 	* [Django](python/django.md)
+	* [Fluent Python](python/fluent-python-book.md)
 	* [Numpy](ml/numpy.md)
 	* [Packages](python/packages.md)]
+	* [Pandas](python/pandas.md)]
 	* [Random](python/random.md)]
 	* [Science Packages](python/sci-packs.md)
 	* [Visualisations](python/visualisations.md)
@@ -101,8 +105,10 @@
 	* [Angular](tech/angular.md)
 	* [Devops](tech/devops.md)
 	* [Gitbook](tech/gitbook.md)
+	* [Github App](tech/github-app.md)
 	* [Gradle](tech/gradle.md)
 	* [Jupyter](tech/jupyter.md)
 	* [Other](tech/other-tech.md)
 	* [Rails](tech/rails.md)
+	* [Slack](tech/slack.md)
 	* [Swagger](tech/swagger.md)

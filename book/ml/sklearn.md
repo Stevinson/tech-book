@@ -1,5 +1,14 @@
 # SKLearn
 
+## General
+
+* sklearn uses a "greater is better" rule - a predictors score should be higher if it is better than another at prediction.
+
+* `CountVectorizer` : 
+	* `fit_transform(raw_documents)` - learn the vocabulary dictionary and return term-document matrix. This can then be turned into a sparse matrix with `.toarray()`
+	* `get_feature_names()` - 
+	* `fit()` - learn a vocabulary dictionary of all tokens in the raw documents?
+	
 
 * `DecisionTreeClassifier`
 	* `fit()`
@@ -8,12 +17,6 @@
 
 * `GradientBoostingClassifier(num_estimators, learning_rate, max_depth)`
 	
-
-
-* `CountVectorizer` : 
-	* `fit_transform(raw_documents)` - learn the vocabulary dictionary and return term-document matrix. This can then be turned into a sparse matrix with `.toarray()`
-	* `get_feature_names()` - 
-	* `fit()` - learn a vocabulary dictionary of all tokens in the raw documents?
 
 ## Feature Extraction
 

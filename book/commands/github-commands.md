@@ -34,6 +34,8 @@
 
 * `git commit --amend --no-edit` : Add the latest changes to the prvious commit
 
+* ` git remote prune origin`
+
 ### Branching
 
 * `git branch -u origin edward-stevinson`

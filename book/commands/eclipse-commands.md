@@ -87,3 +87,5 @@ Changes to the Java perspective.
 * `alt` + `shift` + `C`: view all recent changes
 
 * `alt` + `click`: select multiple cursor locations
+
+* To show hidden columns again: cmmd + shit + A and search for 'reset view'
