@@ -65,3 +65,13 @@ Where `size` is a tuple that defines the output shape.
 * `np.clip(array, min, max)` - given a range this will clip the values that lie out of the provided values to the edge values.
 
 * `np.arange()` - create an array which contains 
+
+* `np.newaxis` is used to increase the dimension of the existing array by one more dimension, when used once
+
+* `np.memmap` can be used when a dataset does not fit in memory.
+  
+```python
+filename = "my_mnist.data"
+X_mm = np.memmap(filename, dtype='float32', mode='write', shape=X_train.shape)
+X_mm[:] = X_train`
+```

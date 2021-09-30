@@ -36,3 +36,46 @@ A **foreign key** is a set of columns in a table that which are required to matc
 ##
 
 OLD TABLE, NEW TABLE and FINAL TABLE can be used to see what has changed after an update.
+
+---
+
+## Scans
+
+Scan Types:
+
+* Sequential Scan
+    * Basically a brute-force retrieval from disk
+    * Scans the whole table
+    * Fast for small tables
+
+* Index Scan
+    * Scan all/some rows in an index; look up rows in heap
+    * Causes random seek, which can be costly for old-school spindle-based disks
+    * Faster than a Sequential Scan when extracting a small number of rows for large tables
+
+* Index Only Scan
+    * Scan all/some rows in index
+    * No need to lookup rows in the table because the values we want are already stored in the index itself
+
+* Bitmap Heap Scan
+    * Scan index, building a bitmap of pages to visit
+    * Then, look up only relevant pages in the table for desired rows
+
+## Joins
+
+Join Types:
+
+* Nested Loops
+    * For each row in the outer table, scan for matching rows in the inner table
+    * Fast to start, best for small tables
+
+* Merge Join
+    * Zipper-operation on _sorted_ data sets
+    * Good for large tables
+    * High startup cost if an additional sort is required
+
+* Hash Join
+    * Build hash of inner table values, scan outer table for matches
+    * Only usable for equality conditions
+    * High startup cost, but fast execution
+

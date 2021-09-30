@@ -76,3 +76,11 @@ module.exports = {
 github answer
 https://stackoverflow.com/questions/52210425/validate-datetime-value-using-python-jsonschema#comment114776133_52210647
 validate(order, schema, format_checker=jsonschema.FormatChecker()) as well as the package
+
+Thank you so much for this, it’s incredibly useful. For a while I thought I was going to be able 
+
+There’s a curfew at the moment but hopefully things to start to open up later in the month. Watching some horse racing and cricket both sound great.
+
+If you could put me in touch with friends that would be great - always good to know people from the place.
+
+As painful as it was to leave them - I made sure not to pack my camo speedos.
